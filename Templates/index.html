@@ -63,7 +63,7 @@
 
             <div class="branding d-flex align-items-cente">
                 <div class="container position-relative d-flex align-items-center justify-content-between">
-                    <a href="index.html" class="logo d-flex align-items-center">
+                    <a href="#hero" class="logo d-flex align-items-center">
                         <!-- Uncomment the line below if you also wish to use an image logo -->
                         <img id="Logo_img" src="{% static 'img/MINDZENlogo-01.png' %}" alt="Logo" />
 
@@ -640,7 +640,7 @@
                                         class="testimonial-img"
                                         alt=""
                                     />
-                                    <h3>Jena Karlis</h3>
+                                    <h3>It Infrastructure Services</h3>
                                     {% comment %} <h4>Store Owner</h4> {% endcomment %}
                                     <div class="stars">
                                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
@@ -1422,11 +1422,15 @@
         ></a>
 
         <!-- Preloader -->
+        {% comment %} <div id="preloader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div> {% endcomment %}
+
         <div id="preloader">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div class="spinner"></div>
         </div>
 
         <!-- Vendor JS Files -->
