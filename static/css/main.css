@@ -10,10 +10,19 @@
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'Elephant';
+  src: url('../font/ELEPHNT.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Montserrat",  sans-serif;
+  /* --heading-font: "Montserrat",  sans-serif; */
+  --heading-font: 'Elephant', sans-serif;
   --nav-font: "Open Sans",  sans-serif;
 }
 
@@ -216,7 +225,7 @@ h6 {
 
 #Logo_img {
   max-height: 100px;
-  margin-right: 8px;
+  margin-right: 0px !important;
 }
 
 .header .logo h1 {
