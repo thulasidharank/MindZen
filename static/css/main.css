@@ -21,8 +21,7 @@
 /* Fonts */
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  /* --heading-font: "Montserrat",  sans-serif; */
-  --heading-font: 'Elephant', sans-serif;
+  --heading-font: "Montserrat",  sans-serif;
   --nav-font: "Open Sans",  sans-serif;
 }
 
@@ -219,12 +218,12 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 100px;
+  max-height: 80px;
   margin-right: 8px;
 }
 
 #Logo_img {
-  max-height: 100px;
+  max-height: 80px;
   margin-right: 0px !important;
 }
 
@@ -929,13 +928,16 @@ section,
 
 .hero h1 {
   margin: 0;
+  font-family: 'Elephant', sans-serif;
   font-size: 44px;
   font-weight: 700;
   line-height: 56px;
+  letter-spacing: 3px;
 }
 
 .hero h1 span {
   color: transparent;
+  font-family: 'Elephant', sans-serif;
   background: var(--digiGlow-gradient);
   background-clip: text;
 }
@@ -1122,9 +1124,34 @@ section,
   font-size: 26px;
 }
 
+
 .about .about-content ul {
-  list-style: none;
+  /* list-style: none; */
   padding: 0;
+}
+
+.about .about_items_row {
+  margin: 15px 0;
+}
+
+.about .about_items_row .item_col {
+  margin: 10px 0;
+}
+
+.about .about_items_row .item_col .about_item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-weight: 600;
+}
+
+.about .about_items_row .item_col .about_item i {
+  color: #fff;
+  font-size: 14px;
+  background-color: var(--digi-hover-color);
+  padding: 8px 10px;
+  border-radius: 50%;
+  margin-right: 8px;
 }
 
 .about .about-content ul li {

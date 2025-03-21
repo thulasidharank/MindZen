@@ -30,6 +30,12 @@
         <!-- Main CSS File -->
         <link href="{% static 'css/main.css' %}" rel="stylesheet" />
 
+        <style>
+            @font-face {
+                font-family: "Elephant";
+                src: url("{% static 'font/ELEPHNT.TTF' %}") format("truetype");
+            }
+        </style>
     </head>
 
     <body class="index-page">
@@ -66,18 +72,20 @@
                             class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
                             data-aos="zoom-out"
                         >
-                            <h1>Welcome to <span>MindZen</span></h1>
+                            <h1 style="font-family: 'Elephant', sans-serif; font-size: 44px; color: #333">
+                                Welcome to <span>MindZen</span>
+                            </h1>
                             <p>
                                 we are a leading global technology service provider specializing in innovative and
                                 cutting-edge solutions that empower businesses to thrive in the digital age
                             </p>
                             <div class="d-flex">
                                 <a href="#about" class="btn-get-started">Get Started</a>
-                                {% comment %} <a
-                                    href=""
-                                    class="glightbox btn-watch-video d-flex align-items-center"
+                                {% comment %}
+                                <a href="" class="glightbox btn-watch-video d-flex align-items-center"
                                     ><i class="bi bi-play-circle"></i><span class="video_text">Watch Video</span></a
-                                > {% endcomment %}
+                                >
+                                {% endcomment %}
                             </div>
                         </div>
                     </div>
@@ -141,7 +149,7 @@
                 <div class="container">
                     <div class="row gy-3">
                         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                            <img src="{% static 'img/about.jpg' %}" alt="" class="img-fluid" />
+                            <img src="{% static 'img/about-3.jpg' %}" alt="" class="img-fluid" />
                         </div>
 
                         <div
@@ -154,11 +162,48 @@
                                     We bring a deep understanding of local markets to deliver transformative results for our
                                     clients.
                                 </h3>
-                                <p class="fst-italic">
-                                    Headquartered in Saudi Arabia, with operations across GCC countries, India, Europe,
-                                    Singapore and USA.
-                                </p>
-                                <ul>
+
+                                <div class="row about_items_row">
+                                    <div class="col-lg-6 item_col">
+                                        <div class="about_item">
+                                            <i class="bi bi-people"></i>
+                                            
+                                            Staff Augmentation
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 item_col">
+                                        <div class="about_item">
+                                            <i class="bi bi-code-slash"></i>
+                                            Development Services
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 item_col">
+                                        <div class="about_item">
+                                            <i class="bi bi-palette"></i>
+                                            
+                                            Design Services
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 item_col">
+                                        <div class="about_item">
+                                            <i class="bi bi-hdd-network"></i>
+                                            IT Infrastructure Services
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 item_col">
+                                        <div class="about_item">
+                                            <i class="bi bi-cloud-check"></i>
+                                            Managed Cloud Services
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 item_col">
+                                        <div class="about_item">
+                                            <i class="bi bi-megaphone"></i>
+                                            Digital Marketing Services
+                                        </div>
+                                    </div>
+                                </div>
+                                {% comment %} <ul>
                                     <li>
                                         <i class="bi bi-diagram-3"></i>
                                         <div>
@@ -179,12 +224,8 @@
                                             </p>
                                         </div>
                                     </li>
-                                </ul>
-                                <p>
-                                    To be the trusted partner for businesses, helping them unlock new opportunities through
-                                    innovative technology solutions. We aim to drive digital excellence and empower
-                                    organizations to achieve sustained growth in a fast-changing digital world.
-                                </p>
+                                </ul> {% endcomment %}
+                                
                             </div>
                         </div>
                     </div>
@@ -352,7 +393,6 @@
             </section>
             <!-- /Stats Section -->
 
-
             <!-- Services Section -->
             <section id="services" class="services section">
                 <!-- Section Title -->
@@ -490,13 +530,11 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img
-                                        src="{% static 'img/testimonials/3572691.jpg' %}"
-                                        class="testimonial-img"
-                                        alt=""
-                                    />
-                                    <h3>Design Services </h3>
-                                    {% comment %} <h4>Ceo &amp; Founder</h4> {% endcomment %}
+                                    <img src="{% static 'img/testimonials/3572691.jpg' %}" class="testimonial-img" alt="" />
+                                    <h3>Design Services</h3>
+                                    {% comment %}
+                                    <h4>Ceo &amp; Founder</h4>
+                                    {% endcomment %}
                                     <div class="stars">
                                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
                                         ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
@@ -504,8 +542,9 @@
                                     </div>
                                     <p>
                                         <i class="bi bi-quote quote-icon-left"></i>
-                                        <span style="text-transform: uppercase; font-weight: bold;"
-                                            >UI/UX Design , Website Design , Mobile App Design , E commerce App Design , Industrial/Product Design , Logo Design , Graphic Design</span
+                                        <span style="text-transform: uppercase; font-weight: bold"
+                                            >UI/UX Design , Website Design , Mobile App Design , E commerce App Design ,
+                                            Industrial/Product Design , Logo Design , Graphic Design</span
                                         >
                                         <i class="bi bi-quote quote-icon-right"></i>
                                     </p>
@@ -515,13 +554,11 @@
 
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img
-                                        src="{% static 'img/testimonials/54750.jpg' %}"
-                                        class="testimonial-img"
-                                        alt=""
-                                    />
-                                    <h3>Development Services </h3>
-                                    {% comment %} <h4>Designer</h4> {% endcomment %}
+                                    <img src="{% static 'img/testimonials/54750.jpg' %}" class="testimonial-img" alt="" />
+                                    <h3>Development Services</h3>
+                                    {% comment %}
+                                    <h4>Designer</h4>
+                                    {% endcomment %}
                                     <div class="stars">
                                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
                                         ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
@@ -529,8 +566,11 @@
                                     </div>
                                     <p>
                                         <i class="bi bi-quote quote-icon-left"></i>
-                                        <span style="text-transform: uppercase; font-weight: bold;"
-                                            >Web Development , Mobile App Development, Business Process Automation, Enterprise Software Solutions, Custom E-Commerce Solutions, Cloud-Based Solutions, API Integration & Development, Software Migration & Upgrades, Custom Analytics & Reporting Solutions, Maintenance & Support</span
+                                        <span style="text-transform: uppercase; font-weight: bold"
+                                            >Web Development , Mobile App Development, Business Process Automation,
+                                            Enterprise Software Solutions, Custom E-Commerce Solutions, Cloud-Based
+                                            Solutions, API Integration & Development, Software Migration & Upgrades, Custom
+                                            Analytics & Reporting Solutions, Maintenance & Support</span
                                         >
                                         <i class="bi bi-quote quote-icon-right"></i>
                                     </p>
@@ -540,13 +580,11 @@
 
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img
-                                        src="{% static 'img/testimonials/18377.jpg' %}"
-                                        class="testimonial-img"
-                                        alt=""
-                                    />
+                                    <img src="{% static 'img/testimonials/18377.jpg' %}" class="testimonial-img" alt="" />
                                     <h3>IT Infrastructure Services</h3>
-                                    {% comment %} <h4>Store Owner</h4> {% endcomment %}
+                                    {% comment %}
+                                    <h4>Store Owner</h4>
+                                    {% endcomment %}
                                     <div class="stars">
                                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
                                         ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
@@ -554,9 +592,13 @@
                                     </div>
                                     <p>
                                         <i class="bi bi-quote quote-icon-left"></i>
-                                        <span style="text-transform: uppercase; font-weight: bold;"
-                                            >Data Center Design and Setup, Data Center Operations and Monitoring, Virtualization and Cloud Integration, Security and Compliance, Network Management, Hardware and Software Management, Energy Efficiency and Sustainability, Performance Optimization and Reporting, End-to-End Lifecycle Management, </span
-                                        >
+                                        <span style="text-transform: uppercase; font-weight: bold"
+                                            >Data Center Design and Setup, Data Center Operations and Monitoring,
+                                            Virtualization and Cloud Integration, Security and Compliance, Network
+                                            Management, Hardware and Software Management, Energy Efficiency and
+                                            Sustainability, Performance Optimization and Reporting, End-to-End Lifecycle
+                                            Management,
+                                        </span>
                                         <i class="bi bi-quote quote-icon-right"></i>
                                     </p>
                                 </div>
@@ -565,13 +607,11 @@
 
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img
-                                        src="{% static 'img/testimonials/42972.jpg' %}"
-                                        class="testimonial-img"
-                                        alt=""
-                                    />
+                                    <img src="{% static 'img/testimonials/42972.jpg' %}" class="testimonial-img" alt="" />
                                     <h3>Managed Cloud Services</h3>
-                                    {% comment %} <h4>Freelancer</h4> {% endcomment %}
+                                    {% comment %}
+                                    <h4>Freelancer</h4>
+                                    {% endcomment %}
                                     <div class="stars">
                                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
                                         ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
@@ -579,8 +619,9 @@
                                     </div>
                                     <p>
                                         <i class="bi bi-quote quote-icon-left"></i>
-                                        <span style="text-transform: uppercase; font-weight: bold;"
-                                            >Cloud Consulting , Cloud Migration Assistance , DevOps Services , Automated Alerts</span
+                                        <span style="text-transform: uppercase; font-weight: bold"
+                                            >Cloud Consulting , Cloud Migration Assistance , DevOps Services , Automated
+                                            Alerts</span
                                         >
                                         <i class="bi bi-quote quote-icon-right"></i>
                                     </p>
@@ -590,13 +631,11 @@
 
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
-                                    <img
-                                        src="{% static 'img/testimonials/2352648.jpg' %}"
-                                        class="testimonial-img"
-                                        alt=""
-                                    />
+                                    <img src="{% static 'img/testimonials/2352648.jpg' %}" class="testimonial-img" alt="" />
                                     <h3>Digital Marketing</h3>
-                                    {% comment %} <h4>Entrepreneur</h4> {% endcomment %}
+                                    {% comment %}
+                                    <h4>Entrepreneur</h4>
+                                    {% endcomment %}
                                     <div class="stars">
                                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
                                         ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
@@ -604,16 +643,17 @@
                                     </div>
                                     <p>
                                         <i class="bi bi-quote quote-icon-left"></i>
-                                        <span style="text-transform: uppercase; font-weight: bold;"
-                                            >Search Engine Optimization (SEO) , Pay-Per-Click (PPC) Advertising,  Social Media Marketing
-, Content Marketing, Email Marketing, Conversion Rate Optimization (CRO), Influencer Marketing, Online Reputation Management, Performance Marketing, Mobile App Marketing, E commerce Marketing</span
+                                        <span style="text-transform: uppercase; font-weight: bold"
+                                            >Search Engine Optimization (SEO) , Pay-Per-Click (PPC) Advertising, Social
+                                            Media Marketing , Content Marketing, Email Marketing, Conversion Rate
+                                            Optimization (CRO), Influencer Marketing, Online Reputation Management,
+                                            Performance Marketing, Mobile App Marketing, E commerce Marketing</span
                                         >
                                         <i class="bi bi-quote quote-icon-right"></i>
                                     </p>
                                 </div>
                             </div>
                             <!-- End testimonial item -->
-
 
                             <div class="swiper-slide">
                                 <div class="testimonial-item">
@@ -622,8 +662,10 @@
                                         class="testimonial-img"
                                         alt=""
                                     />
-                                    <h3>Staff Augmentation Services </h3>
-                                    {% comment %} <h4>Entrepreneur</h4> {% endcomment %}
+                                    <h3>Staff Augmentation Services</h3>
+                                    {% comment %}
+                                    <h4>Entrepreneur</h4>
+                                    {% endcomment %}
                                     <div class="stars">
                                         <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
                                         ><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
@@ -631,8 +673,10 @@
                                     </div>
                                     <p>
                                         <i class="bi bi-quote quote-icon-left"></i>
-                                        <span style="text-transform: uppercase; font-weight: bold;"
-                                            >IT Staff Augmentation, Business and Marketing Staff Augmentation, Engineering and Manufacturing Staff Augmentation, Healthcare Staff Augmentation, Finance and Accounting Staff Augmentation, Customer Service Staff Augmentation</span
+                                        <span style="text-transform: uppercase; font-weight: bold"
+                                            >IT Staff Augmentation, Business and Marketing Staff Augmentation, Engineering
+                                            and Manufacturing Staff Augmentation, Healthcare Staff Augmentation, Finance and
+                                            Accounting Staff Augmentation, Customer Service Staff Augmentation</span
                                         >
                                         <i class="bi bi-quote quote-icon-right"></i>
                                     </p>
@@ -645,7 +689,6 @@
                     </div>
                 </div>
             </section>
-            
 
             <!-- Contact Section -->
             <section id="contact" class="contact section">
@@ -802,7 +845,9 @@
                             <li><i class="bi bi-chevron-right"></i> <a href="#hero">Home</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="#services">Services</a></li>
-                            {% comment %} <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li> {% endcomment %}
+                            {% comment %}
+                            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            {% endcomment %}
                         </ul>
                     </div>
 
@@ -810,15 +855,24 @@
                         <h4>Our Services</h4>
                         <ul>
                             <li><i class="bi bi-chevron-right"></i> <a href="#design-serivce">Design Services</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#development-service">Web Development Services</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="#infrastructure-services">IT Infrastructure Services</a></li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#development-service">Web Development Services</a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right"></i>
+                                <a href="#infrastructure-services">IT Infrastructure Services</a>
+                            </li>
                             <li><i class="bi bi-chevron-right"></i> <a href="#cloud-service">Cloud Services</a></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-4 col-md-12">
                         <h4>Follow Us</h4>
-                        <p>Stay connected with us! Follow us on our social media channels for the latest updates, exciting news.</p>
+                        <p>
+                            Stay connected with us! Follow us on our social media channels for the latest updates, exciting
+                            news.
+                        </p>
                         <div class="social-links d-flex">
                             <a href=""><i class="bi bi-twitter-x"></i></a>
                             <a href=""><i class="bi bi-facebook"></i></a>
@@ -831,7 +885,8 @@
 
             <div class="container copyright text-center mt-4">
                 <p>
-                    © <span>Copyright</span> <strong class="px-1 sitename">Tortillon</strong> <span>All Rights Reserved</span>
+                    © <span>Copyright</span> <strong class="px-1 sitename">Tortillon</strong>
+                    <span>All Rights Reserved</span>
                 </p>
             </div>
         </footer>
@@ -842,12 +897,14 @@
         ></a>
 
         <!-- Preloader -->
-        {% comment %} <div id="preloader">
+        {% comment %}
+        <div id="preloader">
             <div></div>
             <div></div>
             <div></div>
             <div></div>
-        </div> {% endcomment %}
+        </div>
+        {% endcomment %}
 
         <div id="preloader">
             <div class="spinner"></div>
