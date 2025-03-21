@@ -9,7 +9,7 @@
         <meta name="keywords" content="" />
 
         <!-- Favicons -->
-        <link href="{% static 'img/MINDZENlogo-01.png' %}" rel="icon" />
+        <link href="{% static 'img/MINDZEN-logo.png' %}" rel="icon" />
         <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" />
 
         <!-- Fonts -->
@@ -33,7 +33,7 @@
         <style>
             @font-face {
                 font-family: "Elephant";
-                src: url("{% static 'font/ELEPHNT.TTF' %}") format("truetype");
+                src: url("{% static 'font/Elephant2.ttf' %}") format("truetype");
             }
         </style>
     </head>
@@ -53,8 +53,8 @@
                         <ul>
                             <li><a href="#hero" class="active">Home</a></li>
                             <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Careers</a></li>
                             <li><a href="#services">Services</a></li>
-                            <li><a href="#services">Careers</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
                         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -419,7 +419,7 @@
                                     Providing skilled professionals to strengthen your team and meet project demands with
                                     flexibility and expertise.
                                 </p>
-                                <a href="#" class="stretched-link"></a>
+                                <a href="{% url 'staff_augmentation' %}" class="stretched-link"></a>
                             </div>
                         </div>
                         <!-- End Service Item -->
