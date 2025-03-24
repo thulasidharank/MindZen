@@ -65,6 +65,7 @@
 
         <main class="main">
             <!-- Hero Section -->
+            {% comment %}
             <section id="hero" class="hero section light-background">
                 <div class="container">
                     <div class="row gy-4">
@@ -81,16 +82,44 @@
                             </p>
                             <div class="d-flex">
                                 <a href="#about" class="btn-get-started">Get Started</a>
-                                {% comment %}
-                                <a href="" class="glightbox btn-watch-video d-flex align-items-center"
-                                    ><i class="bi bi-play-circle"></i><span class="video_text">Watch Video</span></a
-                                >
-                                {% endcomment %}
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            {% endcomment %}
+
+            <div id="hero" class="hero">
+                <div class="container-fluid m-0 p-0">
+                    <div class="row hero_row">
+                        <div id="carouselExampleInterval" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active" data-bs-interval="5000">
+                                    <img src="{% static '/img/hero-bg.jpg' %}" class="d-block w-100" alt="..." />
+                                </div>
+                                <div class="carousel-item" data-bs-interval="5000">
+                                    <img src="{% static '/img/about-2.jpg' %}" class="d-block w-100" alt="..." />
+                                </div>
+                                <div class="carousel-item" data-bs-interval="5000">
+                                    <img src="{% static '/img/about-3.jpg' %}" class="d-block w-100" alt="..." />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hero-content text-center">
+                            <h1>Welcome to <span>MindZen</span></h1>
+                            <p>
+                                We are a leading global technology service provider specializing in innovative and
+                                cutting-edge solutions that empower businesses to thrive in the digital age.
+                            </p>
+                            <div class="d-flex justify-content-start">
+                                <a href="#about" class="btn-get-started">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- /Hero Section -->
 
             <!-- Featured Services Section -->
@@ -492,7 +521,7 @@
                             </div>
                         </div>
                         <!-- End Service Item -->
-                        
+
                         <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
                             <div class="service-item position-relative">
                                 <div class="icon">
@@ -505,7 +534,7 @@
                                     Boosting your online presence with tailored strategies for SEO, social media, and
                                     targeted campaigns.
                                 </p>
-                                
+
                                 <a href="{% url 'digital_marketing_services' %}" class="stretched-link"></a>
                             </div>
                         </div>
@@ -852,7 +881,11 @@
                         <div class="footer-contact pt-3">
                             <p>Mindzen Technologies Private Limited, Akshaya Nagar,Bangalore, <strong>India</strong></p>
                             <p>Mindzen Technologies Private Limited, MBZ, Behind Safeer Mall, <strong>Dubai</strong></p>
-                            <p class="mt-3"><strong>Phone:</strong> <span>+91 7829527882 (India)</span><br><span class="ms-5">+971 50 979 8265 (Dubai)</span></p>
+                            <p class="mt-3">
+                                <strong>Phone:</strong> <span>+91 7829527882 (India)</span><br /><span class="ms-5"
+                                    >+971 50 979 8265 (Dubai)</span
+                                >
+                            </p>
                             <p><strong>Email:</strong> <span>info@mindzen.com</span></p>
                         </div>
                     </div>
@@ -941,5 +974,14 @@
 
         <!-- Main JS File -->
         <script src="{% static 'js/main.js' %}"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let carousel = new bootstrap.Carousel(document.querySelector("#carouselExampleInterval"), {
+                    interval: 5000,
+                    pause: false,
+                });
+            });
+        </script>
     </body>
 </html>
