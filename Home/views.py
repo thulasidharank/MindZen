@@ -12,3 +12,6 @@ def development_services(request):
 
 def it_infrastructure_services(request):
     return render(request, 'it_infrastructure_services.html')
+
+def design_services(request):
+    return render(request, 'design_services.html')

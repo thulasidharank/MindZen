@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Design Services - MindZen</title>
+
+        <!-- Favicons -->
+        <link href="{% static 'img/MINDZEN-logo.png' %}" rel="icon" />
+        <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" />
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Vendor CSS Files -->
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet" />
+
+        <link rel="stylesheet" href="{% static 'css/design_services.css' %}" />
+    </head>
+    <body>
+        <header id="header" class="header sticky-top">
+            <div class="branding d-flex align-items-center">
+                <div class="position-relative d-flex align-items-center justify-content-between">
+                    <a href="#hero" class="logo d-flex align-items-center">
+                        <img id="Logo_img" src="{% static 'img/MINDZEN-logo.png' %}" alt="Logo" />
+                        <h1 class="sitename">MindZen</h1>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Banner Section -->
+        <section class="banner">
+            <img src="{% static 'img/design_services.jpg' %}" alt="Design Services" />
+            <div class="banner-text">
+                <h1>Design Services</h1>
+                <p>Transforming ideas into stunning, user-friendly designs.</p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="content">
+            <div class="container">
+                <h2>Comprehensive Design Solutions</h2>
+                <p>We specialize in delivering intuitive and visually captivating designs that drive engagement and innovation.</p>
+
+                <div class="service-cards">
+                    <div class="service-card">
+                        <h4>UI/UX Design</h4>
+                        <p>We create user-centric, scalable, and research-driven designs to enhance user experience and engagement.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Website Design</h4>
+                        <p>We build innovative, responsive, and business-driven websites that help brands thrive online.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Mobile App Design</h4>
+                        <p>Our mobile app designs focus on efficiency, accessibility, and seamless user interactions.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>E-commerce App Design</h4>
+                        <p>We design high-performing e-commerce platforms to maximize conversions and user engagement.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Industrial/Product Design</h4>
+                        <p>Transforming ideas into functional, aesthetically appealing products through expert 3D modeling and UX design.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Logo Design</h4>
+                        <p>Crafting unique, memorable brand identities tailored to your business goals.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Graphic Design</h4>
+                        <p>we specialize in delivering aesthetic graphic design services that elevate your digital and print presence. Our proficient team combines creativity with expertise to craft visually captivating designs that not only enhance user experiences but also boost engagement across all platforms.</p>
+                    </div>
+                </div>
+
+                <div class="highlight-section">
+                    <h3>Looking for Professional Design Services?</h3>
+                    <p>We bring creativity and innovation to your brand’s visual identity.</p>
+                    <a href="/#contact" class="cta-button">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
