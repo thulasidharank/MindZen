@@ -18,3 +18,6 @@ def design_services(request):
 
 def managed_cloud_services(request):
     return render(request, 'managed_cloud_services.html')
+
+def digital_marketing_services(request):
+    return render(request, 'digital_marketing_services.html')

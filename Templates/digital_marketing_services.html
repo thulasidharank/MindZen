@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Digital Marketing Services - MindZen</title>
+
+        <!-- Favicons -->
+        <link href="{% static 'img/DIGIGLOWZ-logo.png' %}" rel="icon" />
+        <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" />
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Vendor CSS Files -->
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet" />
+
+        <link rel="stylesheet" href="{% static 'css/digital_marketing_services.css' %}" />
+
+        <style>
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header" class="header sticky-top">
+            <div class="branding d-flex align-items-center">
+                <div class="position-relative d-flex align-items-center justify-content-between">
+                    <a href="#hero" class="logo d-flex align-items-center">
+                        <img id="Logo_img" src="{% static 'img/MINDZEN-logo.png' %}" alt="Logo" />
+                        <h1 class="sitename">MindZen</h1>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Banner Section -->
+        <section class="banner">
+            <img src="{% static 'img/digital_marketing_services-2.jpg' %}" alt="Digital Marketing" />
+            <div class="banner-text">
+                <h1>Digital Marketing Services</h1>
+                <p>Grow your online presence with our expert digital marketing solutions.</p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="content">
+            <div class="container">
+                <h2>Comprehensive Digital Marketing Solutions</h2>
+                <p>
+                    At MindZen, we provide tailored digital marketing strategies to enhance brand visibility, increase engagement, and drive measurable results.
+                </p>
+
+                <h3>Our Core Services</h3>
+                <ul>
+                    <li>Search Engine Optimization (SEO)</li>
+                    <li>Pay-Per-Click (PPC) Advertising</li>
+                    <li>Social Media Marketing</li>
+                    <li>Content Marketing</li>
+                    <li>Email Marketing</li>
+                    <li>Conversion Rate Optimization (CRO)</li>
+                    <li>Influencer Marketing</li>
+                    <li>Online Reputation Management</li>
+                </ul>
+
+                <div class="service-cards">
+                    <div class="service-card">
+                        <h4>SEO & PPC</h4>
+                        <p>
+                            Optimize your online presence with our SEO strategies and targeted PPC campaigns to reach the right audience and maximize ROI.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Social Media & Content Marketing</h4>
+                        <p>
+                            Engage your audience with creative content, strategic social media marketing, and influencer collaborations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="highlight-section">
+                    <h3>Looking to Elevate Your Brand Online?</h3>
+                    <p>We craft customized digital marketing strategies to help you grow.</p>
+                    <a href="/#contact" class="cta-button">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
