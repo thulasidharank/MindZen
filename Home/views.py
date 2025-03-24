@@ -15,3 +15,6 @@ def it_infrastructure_services(request):
 
 def design_services(request):
     return render(request, 'design_services.html')
+
+def managed_cloud_services(request):
+    return render(request, 'managed_cloud_services.html')
