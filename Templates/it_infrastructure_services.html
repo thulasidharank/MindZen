@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>IT Infrastructure Services - MindZen</title>
+
+        <!-- Favicons -->
+        <link href="{% static 'img/MINDZEN-logo.png' %}" rel="icon" />
+        <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" />
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Vendor CSS Files -->
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet" />
+
+        <link rel="stylesheet" href="{% static 'css/it_infrastructure_services.css' %}" />
+    </head>
+    <body>
+        <header id="header" class="header sticky-top">
+            <div class="branding d-flex align-items-center">
+                <div class="position-relative d-flex align-items-center justify-content-between">
+                    <a href="#hero" class="logo d-flex align-items-center">
+                        <img id="Logo_img" src="{% static 'img/MINDZEN-logo.png' %}" alt="Logo" />
+                        <h1 class="sitename">MindZen</h1>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Banner Section -->
+        <section class="banner">
+            <img src="{% static 'img/it_infrastructure_services.jpg' %}" alt="IT Infrastructure" />
+            <div class="banner-text">
+                <h1>IT Infrastructure Services</h1>
+                <p>Secure, scalable, and efficient IT solutions for your business.</p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="content">
+            <div class="container">
+                <h2>Comprehensive IT Infrastructure Solutions</h2>
+                <p>
+                    At MindZen, we provide end-to-end IT infrastructure services to keep your operations secure,
+                    scalable, and efficient. With expertise across multiple industries and global regions, we ensure
+                    seamless IT management tailored to your business needs.
+                </p>
+
+                <h3>Data Center Management Services</h3>
+                <ul>
+                    <li>Data Center Design and Setup</li>
+                    <li>Operations and Monitoring</li>
+                    <li>Virtualization and Cloud Integration</li>
+                    <li>Security and Compliance</li>
+                    <li>Network Management</li>
+                </ul>
+
+                <div class="service-cards">
+                    <div class="service-card">
+                        <h4>Data Center Design and Setup</h4>
+                        <p>
+                            We create tailored infrastructure solutions, ensuring optimal hardware selection, power
+                            management, and security measures for a seamless IT environment.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Operations and Monitoring</h4>
+                        <p>
+                            Our 24/7 monitoring services ensure high availability and proactive incident management,
+                            preventing disruptions and ensuring continuous operations.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="highlight-section">
+                    <h3>Looking for Reliable IT Infrastructure Services?</h3>
+                    <p>Let us help you optimize your IT operations with our tailored solutions.</p>
+                    <a href="/#contact" class="cta-button">Get in Touch</a>
+                </div>
+
+                <h3>Security and Compliance</h3>
+                <p>
+                    We implement advanced cybersecurity measures, ensure regulatory compliance, and provide
+                    comprehensive data protection strategies to safeguard your IT infrastructure.
+                </p>
+
+                <h3>Network Management</h3>
+                <p>
+                    Our network optimization and bandwidth management services ensure high-speed, secure, and
+                    uninterrupted connectivity for your business.
+                </p>
+            </div>
+        </section>
+    </body>
+</html>

@@ -9,3 +9,6 @@ def staff_augmentation(request):
 
 def development_services(request):
     return render(request, 'development_services.html')
+
+def it_infrastructure_services(request):
+    return render(request, 'it_infrastructure_services.html')
