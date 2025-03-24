@@ -5,3 +5,7 @@ def home(request):
 
 def staff_augmentation(request):
     return render(request, 'staff_augmentation.html')
+
+
+def development_services(request):
+    return render(request, 'development_services.html')

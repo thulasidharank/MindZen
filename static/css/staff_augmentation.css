@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -19,6 +21,7 @@ body {
     --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
         "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --heading-font: "Montserrat", sans-serif;
+    --service-heading-font: "Roboto Slab", serif;
     --nav-font: "Open Sans", sans-serif;
 }
 
@@ -425,13 +428,15 @@ body {
     font-size: 32px;
     margin: 0;
     font-weight: 700;
-    font-family: var(--heading-font);
+    font-family: var(--service-heading-font);
+    letter-spacing: 1.5px;
 }
 
 .banner-text p {
     font-size: 15px;
     margin-top: 5px;
-    color: var(--digi-hover-color);
+    /* color: var(--digi-hover-color); */
+    color: rgb(158, 153, 153);
 }
 
 .content {

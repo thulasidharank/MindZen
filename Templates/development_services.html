@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Development Services - Mindzen</title>
+
+        <!-- Favicons -->
+        <link href="{% static 'img/MINDZEN-logo.png' %}" rel="icon" />
+        <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" />
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+        <!-- Vendor CSS Files -->
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/development_services.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <header id="header" class="header sticky-top">
+            <div class="branding d-flex align-items-center">
+                <div class="position-relative d-flex align-items-center justify-content-between">
+                    <a href="#hero" class="logo d-flex align-items-center">
+                        <img id="Logo_img" src="{% static 'img/MINDZEN-logo.png' %}" alt="Logo" />
+                        <h1 class="sitename">MindZen</h1>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Banner Section -->
+        <section class="banner">
+            <img src="{% static 'img/development_services-2.jpg' %}" alt="Development Services" />
+            <div class="banner-text">
+                <h1>Development Services</h1>
+                <p>Innovative solutions tailored to your business needs.</p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="content">
+            <div class="container">
+                <h2>Custom Software Development</h2>
+                <p>
+                    At MindZen, we specialize in building custom software that aligns with your business goals, providing
+                    solutions that optimize operations and enhance user engagement.
+                </p>
+
+                <h3>Our Services</h3>
+
+                <div class="service-cards">
+                    <div class="service-card">
+                        <h4>Web Development</h4>
+                        <p>
+                            We create modern and engaging web applications that boost business growth with high-performance
+                            and responsive design.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Mobile App Development</h4>
+                        <p>
+                            Our team develops innovative and user-friendly mobile applications for iOS and Android, ensuring
+                            seamless experiences across all devices.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Business Process Automation</h4>
+                        <p>
+                            We create automated solutions that streamline repetitive tasks, reducing the need for manual
+                            effort and increasing productivity. From automating administrative tasks to complex workflows,
+                            our software helps you save time and reduce operational costs.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Enterprise Software Solutions</h4>
+                        <p>
+                            Our team builds powerful enterprise software that supports complex business processes and
+                            integrates seamlessly with your existing infrastructure. Whether it's an ERP, CRM, or inventory
+                            management system, we design solutions that enhance collaboration, improve decision-making, and
+                            ensure smooth operations.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Custom E-Commerce Solutions</h4>
+                        <p>
+                            We develop tailored e-commerce platforms that enhance customer shopping experiences and increase
+                            conversion rates. From custom shopping carts and payment gateway integrations to inventory
+                            management systems, we provide all the tools you need to run a successful online store.
+                        </p>
+                    </div>
+                    {% comment %} <div class="service-card">
+                        <h4>Cloud-Based Solutions</h4>
+                        <p>
+                            We design and build cloud-based applications that offer scalability, flexibility, and cost
+                            efficiency. Leveraging AWS, Azure, or Google Cloud, we ensure your application is hosted on a
+                            secure and reliable platform, capable of scaling with your business.
+                        </p>
+                    </div> {% endcomment %}
+                    {% comment %} <div class="service-card">
+                        <h4>API Integration & Development</h4>
+                        <p>
+                            Our custom API development services enable seamless communication between your software and
+                            third-party services. Whether it’s integrating payment gateways, social media platforms, or
+                            other enterprise systems, we create APIs that boost functionality and connectivity.
+                        </p>
+                    </div> {% endcomment %}
+                    <div class="service-card">
+                        <h4>Software Migration & Upgrades</h4>
+                        <p>
+                            We help businesses migrate to modern platforms, update outdated systems, and improve existing
+                            software to meet evolving needs. Whether you need a database migration, legacy system upgrade,
+                            or cloud migration, we ensure your software stays ahead of the curve.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Custom Analytics & Reporting Solutions</h4>
+                        <p>
+                            Our software solutions include analytics and reporting features that provide deep insights into
+                            your business. We build dashboards and reporting tools that empower you to make data-driven
+                            decisions, optimize processes, and track key performance indicators (KPIs).
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Maintenance & Support</h4>
+                        <p>
+                            Our job doesn’t end after the software is deployed. We provide ongoing maintenance and support
+                            to ensure that your solution continues to perform at its best. From bug fixes to feature
+                            updates, we ensure your software remains efficient and relevant as your business grows.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="highlight-section">
+                    <h3>Need Custom Software for Your Business?</h3>
+                    <p>We create tailored solutions to drive your business success.</p>
+                    <a href="/#contact" class="cta-button">Get in Touch</a>
+                </div>
+
+                <h3>Cloud-Based Solutions</h3>
+                <p>
+                    We design and build cloud-based applications that offer scalability, flexibility, and cost efficiency.
+                    Leveraging AWS, Azure, or Google Cloud, we ensure your application is hosted on a secure and reliable
+                    platform, capable of scaling with your business.
+                </p>
+
+                <h3>API Integration & Development</h3>
+                <p>
+                    Our custom API development services enable seamless communication between your software and
+                    third-party services. Whether it’s integrating payment gateways, social media platforms, or
+                    other enterprise systems, we create APIs that boost functionality and connectivity.
+                </p>
+            </div>
+        </section>
+    </body>
+</html>
