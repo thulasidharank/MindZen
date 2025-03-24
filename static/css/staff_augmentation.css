@@ -434,7 +434,6 @@ body {
     color: var(--digi-hover-color);
 }
 
-/* Content Section */
 .content {
     padding: 60px 0;
     background-color: #f8f9fa;
@@ -487,7 +486,6 @@ p {
     font-size: 16px;
 }
 
-/* List Styling */
 ul, ol {
     padding-left: 20px;
     margin-bottom: 30px;
@@ -532,7 +530,6 @@ ol li:before {
     left: -28px;
 }
 
-/* Card Layout for Services */
 .service-cards {
     display: flex;
     flex-wrap: wrap;
@@ -568,7 +565,6 @@ ol li:before {
     margin-bottom: 0;
 }
 
-/* Highlight Section */
 .highlight-section {
     background: linear-gradient(to right, #2fb1be, #276a91);
     padding: 40px;
@@ -588,7 +584,6 @@ ol li:before {
     margin-bottom: 0;
 }
 
-/* CTA Button */
 .cta-button {
     display: inline-block;
     background: white;
@@ -633,7 +628,6 @@ ol li:before {
     }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .banner-text {
         width: 90%;
