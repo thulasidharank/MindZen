@@ -947,7 +947,7 @@ section,
 
 @media (max-width: 768px) {
   .hero_row .carousel {
-    height: 400px;
+    height: 420px;
   }
 }
 
@@ -970,6 +970,12 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .hero_row .carousel .carousel-inner .carousel-item img {
+    object-position: right;
+  }
 }
 
 .hero_row .hero-content {
