@@ -1369,7 +1369,7 @@ section,
 }
 
 .clients .swiper {
-  padding: 10px 0;
+  padding: 15px 0;
 }
 
 .clients .swiper-wrapper {
@@ -1377,11 +1377,13 @@ section,
 }
 
 .clients .swiper-slide img {
+  transform: scale(1.8);
+  cursor: pointer;
   transition: 0.3s;
 }
 
 .clients .swiper-slide img:hover {
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 
 /*--------------------------------------------------------------
