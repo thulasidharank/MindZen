@@ -47,10 +47,26 @@
 
         <!-- Banner Section -->
         <section class="banner">
-            <img src="{% static 'img/digital_marketing_services-2.jpg' %}" alt="Digital Marketing" />
-            <div class="banner-text">
-                <h1>Digital Marketing Services</h1>
-                <p>Grow your online presence with our expert digital marketing solutions.</p>
+            <div class="container-fluid p-0">
+                <div class="row banner_row">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade p-0" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="5000">
+                                <img src="{% static '/img/staff_augmentation-2.jpg' %}" class="d-block w-100" alt="..." />
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <img src="{% static '/img/design_services.jpg' %}" class="d-block w-100" alt="..." />
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <img src="{% static '/img/staff_augmentation-3.jpg' %}" class="d-block w-100" alt="..." />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-text">
+                        <h1>Digital Marketing Services</h1>
+                        <p>Grow your online presence with our expert digital marketing solutions.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -59,7 +75,8 @@
             <div class="container">
                 <h2>Comprehensive Digital Marketing Solutions</h2>
                 <p>
-                    At MindZen, we provide tailored digital marketing strategies to enhance brand visibility, increase engagement, and drive measurable results.
+                    At MindZen, we provide tailored digital marketing strategies to enhance brand visibility, increase
+                    engagement, and drive measurable results.
                 </p>
 
                 <h3>Our Core Services</h3>
@@ -78,13 +95,15 @@
                     <div class="service-card">
                         <h4>SEO & PPC</h4>
                         <p>
-                            Optimize your online presence with our SEO strategies and targeted PPC campaigns to reach the right audience and maximize ROI.
+                            Optimize your online presence with our SEO strategies and targeted PPC campaigns to reach the
+                            right audience and maximize ROI.
                         </p>
                     </div>
                     <div class="service-card">
                         <h4>Social Media & Content Marketing</h4>
                         <p>
-                            Engage your audience with creative content, strategic social media marketing, and influencer collaborations.
+                            Engage your audience with creative content, strategic social media marketing, and influencer
+                            collaborations.
                         </p>
                     </div>
                 </div>
@@ -96,5 +115,8 @@
                 </div>
             </div>
         </section>
+
+        <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
     </body>
 </html>

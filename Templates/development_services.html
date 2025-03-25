@@ -27,7 +27,6 @@
                 text-decoration: none;
             }
         </style>
-
     </head>
     <body>
         <header id="header" class="header sticky-top">
@@ -43,10 +42,26 @@
 
         <!-- Banner Section -->
         <section class="banner">
-            <img src="{% static 'img/development_services-2.jpg' %}" alt="Development Services" />
-            <div class="banner-text">
-                <h1>Development Services</h1>
-                <p>Innovative solutions tailored to your business needs.</p>
+            <div class="container-fluid p-0">
+                <div class="row banner_row">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade p-0" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="5000">
+                                <img src="{% static '/img/development_services-2.jpg' %}" class="d-block w-100" alt="..." />
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <img src="{% static '/img/design_services.jpg' %}" class="d-block w-100" alt="..." />
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <img src="{% static '/img/staff_augmentation-3.jpg' %}" class="d-block w-100" alt="..." />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-text">
+                        <h1>Development Services</h1>
+                        <p>Innovative solutions tailored to your business needs.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -101,22 +116,25 @@
                             management systems, we provide all the tools you need to run a successful online store.
                         </p>
                     </div>
-                    {% comment %} <div class="service-card">
+                    {% comment %}
+                    <div class="service-card">
                         <h4>Cloud-Based Solutions</h4>
                         <p>
                             We design and build cloud-based applications that offer scalability, flexibility, and cost
                             efficiency. Leveraging AWS, Azure, or Google Cloud, we ensure your application is hosted on a
                             secure and reliable platform, capable of scaling with your business.
                         </p>
-                    </div> {% endcomment %}
-                    {% comment %} <div class="service-card">
+                    </div>
+                    {% endcomment %} {% comment %}
+                    <div class="service-card">
                         <h4>API Integration & Development</h4>
                         <p>
                             Our custom API development services enable seamless communication between your software and
                             third-party services. Whether it’s integrating payment gateways, social media platforms, or
                             other enterprise systems, we create APIs that boost functionality and connectivity.
                         </p>
-                    </div> {% endcomment %}
+                    </div>
+                    {% endcomment %}
                     <div class="service-card">
                         <h4>Software Migration & Upgrades</h4>
                         <p>
@@ -158,11 +176,15 @@
 
                 <h3>API Integration & Development</h3>
                 <p>
-                    Our custom API development services enable seamless communication between your software and
-                    third-party services. Whether it’s integrating payment gateways, social media platforms, or
-                    other enterprise systems, we create APIs that boost functionality and connectivity.
+                    Our custom API development services enable seamless communication between your software and third-party
+                    services. Whether it’s integrating payment gateways, social media platforms, or other enterprise
+                    systems, we create APIs that boost functionality and connectivity.
                 </p>
             </div>
         </section>
+
+
+        <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
     </body>
 </html>

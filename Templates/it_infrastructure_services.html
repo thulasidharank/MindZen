@@ -47,10 +47,30 @@
 
         <!-- Banner Section -->
         <section class="banner">
-            <img src="{% static 'img/it_infrastructure_services.jpg' %}" alt="IT Infrastructure" />
-            <div class="banner-text">
-                <h1>IT Infrastructure Services</h1>
-                <p>Secure, scalable, and efficient IT solutions for your business.</p>
+            <div class="container-fluid p-0">
+                <div class="row banner_row">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade p-0" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="5000">
+                                <img
+                                    src="{% static '/img/it_infrastructure_services.jpg' %}"
+                                    class="d-block w-100"
+                                    alt="..."
+                                />
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <img src="{% static '/img/staff_augmentation-2.jpg' %}" class="d-block w-100" alt="..." />
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000">
+                                <img src="{% static '/img/staff_augmentation-3.jpg' %}" class="d-block w-100" alt="..." />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-text">
+                        <h1>IT Infrastructure Services</h1>
+                        <p>Secure, scalable, and efficient IT solutions for your business.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -59,9 +79,9 @@
             <div class="container">
                 <h2>Comprehensive IT Infrastructure Solutions</h2>
                 <p>
-                    At MindZen, we provide end-to-end IT infrastructure services to keep your operations secure,
-                    scalable, and efficient. With expertise across multiple industries and global regions, we ensure
-                    seamless IT management tailored to your business needs.
+                    At MindZen, we provide end-to-end IT infrastructure services to keep your operations secure, scalable,
+                    and efficient. With expertise across multiple industries and global regions, we ensure seamless IT
+                    management tailored to your business needs.
                 </p>
 
                 <h3>Data Center Management Services</h3>
@@ -98,16 +118,18 @@
 
                 <h3>Security and Compliance</h3>
                 <p>
-                    We implement advanced cybersecurity measures, ensure regulatory compliance, and provide
-                    comprehensive data protection strategies to safeguard your IT infrastructure.
+                    We implement advanced cybersecurity measures, ensure regulatory compliance, and provide comprehensive
+                    data protection strategies to safeguard your IT infrastructure.
                 </p>
 
                 <h3>Network Management</h3>
                 <p>
-                    Our network optimization and bandwidth management services ensure high-speed, secure, and
-                    uninterrupted connectivity for your business.
+                    Our network optimization and bandwidth management services ensure high-speed, secure, and uninterrupted
+                    connectivity for your business.
                 </p>
             </div>
         </section>
+
+        <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
     </body>
 </html>
