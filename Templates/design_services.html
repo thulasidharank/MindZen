@@ -51,14 +51,14 @@
                 <div class="row banner_row">
                     <div id="carouselExampleFade" class="carousel slide carousel-fade p-0" data-bs-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="5000">
-                                <img src="{% static '/img/staff_augmentation-2.jpg' %}" class="d-block w-100" alt="..." />
+                            <div class="carousel-item active" data-bs-interval="5000" style="background-image: url('{% static "img/Design/design-1.jpg" %}'); background-position: center;">
+                                
                             </div>
-                            <div class="carousel-item" data-bs-interval="5000">
-                                <img src="{% static '/img/design_services.jpg' %}" class="d-block w-100" alt="..." />
+                            <div class="carousel-item" data-bs-interval="5000" style="background-image: url('{% static "img/Design/design-2.jpg" %}'); background-position: center;">
+                                
                             </div>
-                            <div class="carousel-item" data-bs-interval="5000">
-                                <img src="{% static '/img/staff_augmentation-3.jpg' %}" class="d-block w-100" alt="..." />
+                            <div class="carousel-item" data-bs-interval="5000" style="background-image: url('{% static "img/Design/design-3.jpg" %}'); background-position: center;">
+                                
                             </div>
                         </div>
                     </div>
@@ -131,5 +131,13 @@
 
         <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let carousel = new bootstrap.Carousel(document.querySelector("#carouselExampleFade"), {
+                    interval: 5000,
+                    pause: false,
+                });
+            });
+        </script>
     </body>
 </html>

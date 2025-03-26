@@ -402,7 +402,7 @@ body {
 .banner {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 600px;
     overflow: hidden;
 }
 
@@ -429,15 +429,15 @@ body {
 .banner_row .carousal {
     position: relative;
     width: 100%;
-    height: 500px;
+    height: 600px;
     padding: 0;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .banner_row .carousel {
         height: 420px;
     }
-}
+} */
 
 .banner_row .carousel .carousel-inner {
     width: 100%;
@@ -449,16 +449,16 @@ body {
     height: 100%;
     position: relative;
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
 }
 
-.banner_row .carousel .carousel-inner .carousel-item img {
+/* .banner_row .carousel .carousel-inner .carousel-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+    object-position: center top;
+} */
 
 .banner_row .banner-text {
     position: absolute;
