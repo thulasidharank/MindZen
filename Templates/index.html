@@ -66,31 +66,27 @@
         <main class="main">
             <!-- Hero Section -->
 
-            <div id="hero" class="hero">
-                <div class="container-fluid m-0 p-0">
-                    <div class="row hero_row">
-                        <div id="carouselExampleInterval" class="carousel slide carousel-fade" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active" data-bs-interval="5000">
-                                    <img src="{% static '/img/hero-bg-5.png' %}" class="d-block w-100" alt="..." />
-                                </div>
-                                <div class="carousel-item" data-bs-interval="5000">
-                                    <img src="{% static '/img/hero-bg-1.png' %}" class="d-block w-100" alt="..." />
-                                </div>
-                                <div class="carousel-item" data-bs-interval="5000">
-                                    <img src="{% static '/img/hero-bg-6.png' %}" class="d-block w-100" alt="..." />
+            <div class="heros" id="hero">
+                <div class="container-fluid">
+                    <div class="row heros_row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-12 item-1">
+                            <div class="content_section">
+                                <h1>Welcome to <span>MindZen</span></h1>
+                                <p>
+                                    We are a leading global technology service provider specializing in innovative and
+                                    cutting-edge solutions that empower businesses to thrive in the digital age.
+                                </p>
+                                <div class="d-flex justify-content-start">
+                                    <a href="#about" class="btn-get-started">Get Started</a>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="hero-content text-center">
-                            <h1>Welcome to <span>MindZen</span></h1>
-                            <p>
-                                We are a leading global technology service provider specializing in innovative and
-                                cutting-edge solutions that empower businesses to thrive in the digital age.
-                            </p>
-                            <div class="d-flex justify-content-start">
-                                <a href="#about" class="btn-get-started">Get Started</a>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-12 item-2">
+                            <div class="image_section" style="background-image: url('{% static "img/shape-3.jpg" %}'); background-position: center;">
+                                <div class="hero_img">
+                                    <img src="{% static '/img/bg-3.png' %}" class="d-block w-100" alt="..." />
+                                    {% comment %} <div class="third-circle">AI</div> {% endcomment %}
+                                </div>
                             </div>
                         </div>
                     </div>
