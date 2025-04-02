@@ -769,7 +769,7 @@
                                         </p>
                                         <p class="mt-3">
                                             Mindzen Technologies Private Limited, 01, Building C 106, Shabiya 09, MBZ,
-                                            Behind Safeer Mall, <strong>Dubai</strong> , Land Line - 02 4430074
+                                            Behind Safeer Mall, <strong>UAE</strong> , Land Line - 02 4430074
                                         </p>
                                     </div>
                                 </div>
@@ -779,8 +779,9 @@
                                     <i class="bi bi-telephone flex-shrink-0"></i>
                                     <div>
                                         <h3>Call Us</h3>
-                                        <p>+91 7829527882 (<strong>India</strong>)</p>
-                                        <p>+971 50 979 8265 (<strong>Dubai</strong>)</p>
+                                        <a href="tel:+917829527882">+91 7829527882 (<strong>India</strong>)</a>
+                                        <br>
+                                        <a href="tel:+971509798265">+971 50 979 8265 (<strong>UAE</strong>)</a>
                                     </div>
                                 </div>
                                 <!-- End Info Item -->
@@ -789,7 +790,7 @@
                                     <i class="bi bi-envelope flex-shrink-0"></i>
                                     <div>
                                         <h3>Email Us</h3>
-                                        <p>info@mindzen.com</p>
+                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@mindzentechno.com" target="_blank">info@mindzentechno.com</a>
                                     </div>
                                 </div>
                                 <!-- End Info Item -->
@@ -806,10 +807,9 @@
                         </div>
 
                         <div class="col-lg-7">
+                            {% csrf_token %}
                             <form
-                                action="forms/contact.php"
-                                method="post"
-                                class="php-email-form"
+                                action="/contact/" method="post" class="php-email-form"
                                 data-aos="fade-up"
                                 data-aos-delay="200"
                             >
@@ -853,11 +853,14 @@
                                     </div>
 
                                     <div class="col-md-12 text-center">
-                                        <div class="loading">Loading</div>
-                                        <div class="error-message"></div>
-                                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                                        {% comment %} <div class="loading">Loading</div> {% endcomment %}
+                                        {% comment %} <div class="error-message"></div> {% endcomment %}
+                                        <div class="sent-message" style="display: none; color: white;">Your message has been sent. Thank you!</div>
 
-                                        <button type="submit">Send Message</button>
+                                        <button type="submit" id="submit-btn">
+                                            <span class="btn-text">Send Message</span>
+                                            <span class="spinner-border spinner-border-sm d-none" id="btn-spinner"></span>
+                                        </button>
                                     </div>
                                 </div>
                             </form>
@@ -897,13 +900,12 @@
                         </a>
                         <div class="footer-contact pt-3">
                             <p>Mindzen Technologies Private Limited, Akshaya Nagar,Bangalore, <strong>India</strong></p>
-                            <p>Mindzen Technologies Private Limited, MBZ, Behind Safeer Mall, <strong>Dubai</strong></p>
-                            <p class="mt-3">
-                                <strong>Phone:</strong> <span>+91 7829527882 (India)</span><br /><span class="ms-5"
-                                    >+971 50 979 8265 (Dubai)</span
-                                >
+                            <p>Mindzen Technologies Private Limited, MBZ, Behind Safeer Mall, <strong>UAE</strong></p>
+                            <p class="mt-3"><strong>Email:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@mindzentechno.com" target="_blank">info@mindzentechno.com</a></p>
+                            <p>
+                                <strong>Phone:</strong> <a href="tel:+917829527882">+91 7829527882 (India)</a><br /><a href="tel:+971509798265" class="ms-5"
+                                    >+971 50 979 8265 (UAE)</a>
                             </p>
-                            <p><strong>Email:</strong> <span>info@mindzen.com</span></p>
                         </div>
                     </div>
 
@@ -913,9 +915,6 @@
                             <li><i class="bi bi-chevron-right"></i> <a href="#hero">Home</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="#about">About us</a></li>
                             <li><i class="bi bi-chevron-right"></i> <a href="#services">Services</a></li>
-                            {% comment %}
-                            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-                            {% endcomment %}
                         </ul>
                     </div>
 
@@ -942,10 +941,10 @@
                             news.
                         </p>
                         <div class="social-links d-flex">
-                            <a href=""><i class="bi bi-twitter-x"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
+                            <a href="https://wa.me/917829527882" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/people/Mindzen-Technologies/61573593892371/?sk=about" target="_blank"><i class="bi bi-facebook"></i></a>
+                            {% comment %} <a href=""><i class="bi bi-instagram"></i></a> {% endcomment %}
+                            <a href="https://www.linkedin.com/company/mindzentechno/?viewAsMember=true" target="_blank"><i class="bi bi-linkedin"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1000,5 +999,76 @@
                 });
             });
         </script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                document.querySelector(".php-email-form").addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    
+                    let submitBtn = document.getElementById("submit-btn");
+                    let btnText = document.querySelector(".btn-text");
+                    let btnSpinner = document.getElementById("btn-spinner");
+                    let successMessage = document.querySelector(".sent-message");
+                    let errorMessage = document.querySelector(".error-message");
+            
+                    // Hide previous messages
+                    successMessage.style.display = "none";
+                    errorMessage.style.display = "none";
+            
+                    // Show spinner, hide text
+                    btnText.style.display = "none";
+                    btnSpinner.classList.remove("d-none");
+            
+                    let formData = new FormData(this);
+            
+                    fetch("/contact/", {
+                        method: "POST",
+                        body: formData,
+                        headers: {
+                            "X-Requested-With": "XMLHttpRequest",
+                            "X-CSRFToken": getCookie("csrftoken")
+                        },
+                        credentials: "same-origin"
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.message) {
+                            successMessage.innerText = "Your message has been sent successfully!";
+                            successMessage.style.display = "block"; // Show success message
+                            this.reset();
+                        } else {
+                            errorMessage.innerText = data.error;
+                            errorMessage.style.display = "block";
+                        }
+                    })
+                    .catch(error => {
+                        errorMessage.innerText = `Error: ${error}`;
+                        errorMessage.style.display = "block";
+                    })
+                    .finally(() => {
+                        // Restore button text and hide spinner
+                        btnText.style.display = "inline";
+                        btnSpinner.classList.add("d-none");
+                    });
+                });
+            });
+            
+            // Function to get CSRF token
+            function getCookie(name) {
+                let cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    const cookies = document.cookie.split(';');
+                    for (let i = 0; i < cookies.length; i++) {
+                        const cookie = cookies[i].trim();
+                        if (cookie.startsWith(name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }           
+            </script>
+            
     </body>
 </html>

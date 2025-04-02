@@ -9,5 +9,6 @@ urlpatterns = [
     path('design-services/', views.design_services, name='design_services'),
     path('managed-cloud-services/', views.managed_cloud_services, name='managed_cloud_services'),
     path('digital-marketing-services/', views.digital_marketing_services, name='digital_marketing_services'),
+    path("contact/", views.contact_form, name="contact_form"),
 ]
 
