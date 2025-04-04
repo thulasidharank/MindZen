@@ -489,6 +489,52 @@ body {
     color: rgb(158, 153, 153);
 }
 
+.custom-button {
+    align-items: center;
+    gap: 10px;
+    background: var(--digiGlow-gradient);
+    background: transparent;
+    border: none;
+    margin-right: 10px;
+    padding: 8px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-button a {
+    text-decoration: none;
+    /* color: white; */
+    color: var(--digiGlow-gradient);
+    font-size: 18px;
+}
+
+.custom-button i {
+    /* color: white; */
+    color: rgb(48, 175, 154);
+    font-size: 20px;
+    margin: 0px 5px;
+    /* transition: 0.3s ease; */
+}
+
+.custom-button:hover {
+    background: var(--digiGlow-gradient);
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.custom-button:hover i {
+    color: white;
+}
+
+.left-arrow {
+    font-size: 22px;
+}
+
+.home-icon {
+    font-size: 24px;
+}
+
 .content {
     padding: 60px 0;
     background-color: #f8f9fa;

@@ -20,7 +20,10 @@
         <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet" />
         <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet" />
         <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet" />
+
         <link href="{% static 'css/development_services.css' %}" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 
         <style>
             a {
@@ -29,7 +32,7 @@
         </style>
     </head>
     <body>
-        <header id="header" class="header sticky-top">
+        <header id="header" class="header sticky-top d-flex align-items-center justify-content-between">
             <div class="branding d-flex align-items-center">
                 <div class="position-relative d-flex align-items-center justify-content-between">
                     <a href="#hero" class="logo d-flex align-items-center">
@@ -38,6 +41,11 @@
                     </a>
                 </div>
             </div>
+            <button class="custom-button">
+                <a href="/#services">
+                    <i class="fa-solid fa-house home-icon"></i>
+                </a>
+            </button>
         </header>
 
         <!-- Banner Section -->
