@@ -75,7 +75,7 @@ def send_email(data, subject, fields):
         """
 
         from_email = settings.EMAIL_HOST_USER
-        recipient_list = [settings.EMAIL_HOST_USER]
+        recipient_list = ['jithin@mindzentechno.com']
         email = EmailMessage(subject, message, from_email, recipient_list)
         email.content_subtype = "html"
         email.send()
