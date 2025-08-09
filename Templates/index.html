@@ -35,6 +35,708 @@
                 font-family: "Elephant";
                 src: url("{% static 'font/Elephant2.ttf' %}") format("truetype");
             }
+
+            .heros {
+                width: 100%;
+                min-height: 70vh;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .heros .container-fluid {
+                position: relative;
+                height: 100%;
+                padding: 0px;
+                /* background-color: red; */
+            }
+
+            .heros_row {
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                width: 100%;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .heros_row .item-1 .content_section {
+                margin-left: 50px;
+            }
+
+            .heros_row .item-1 .content_section h1 {
+                margin: 0;
+                font-family: "Elephant", sans-serif;
+                font-size: 44px;
+                font-weight: 700;
+                line-height: 56px;
+                letter-spacing: 3px;
+                text-align: start;
+            }
+
+            .heros_row .item-1 .content_section h1 span {
+                color: transparent;
+                font-family: "Elephant", sans-serif;
+                background: var(--digiGlow-gradient);
+                background-clip: text;
+            }
+
+            .heros_row .item-1 .content_section p {
+                color: color-mix(in srgb, var(--default-color), transparent 30%);
+                margin: 5px 0 30px 0;
+                font-size: 20px;
+                font-weight: 400;
+                text-align: start;
+            }
+
+            .heros_row .item-1 .content_section .btn-get-started {
+                color: var(--contrast-color);
+                background: var(--digiGlow-gradient);
+                font-family: var(--heading-font);
+                font-weight: 600;
+                font-size: 16px;
+                letter-spacing: 1px;
+                display: inline-block;
+                padding: 12px 30px;
+                border-radius: 4px;
+                transition: 0.3s ease-in-out;
+                box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+            }
+
+            .heros_row .item-2 {
+                position: relative;
+                height: 500px; /* Set a fixed height for the container */
+            }
+
+            /* Hero image section - positioned on top */
+            .heros_row .item-2 .hero_img {
+                position: absolute;
+                top: 0; /* Position at the top */
+                left: 0;
+                width: 100%;
+                height: 900px; /* Adjust as needed */
+                background-color: transparent;
+                background-size: cover;
+                background-position: bottom;
+                background-repeat: no-repeat;
+                overflow: hidden;
+                z-index: 2; /* Ensure it's above the background section */
+            }
+
+            .heros_row .item-2 .hero_img img {
+                transform: scale(0.9);
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ensures proper image scaling */
+            }
+
+            /* Background image section - positioned behind the hero image */
+            .heros_row .item-2 .image_section {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                overflow: hidden;
+                animation: zoomInOut 6s infinite ease-in-out;
+                z-index: 1; /* Behind the hero image */
+            }
+
+            @keyframes zoomInOut {
+                0% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.1);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+
+            /* Animated circles - now attached to image_section directly */
+            .heros_row .item-2 .image_section::after {
+                content: "SEO";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 700;
+                color: var(--contrast-color);
+                background: var(--digiGlow-gradient);
+                border-radius: 50%;
+                transform-origin: center;
+                animation: circularMove 5s linear infinite;
+            }
+
+            .heros_row .item-2 .image_section::before {
+                content: "UX";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 16px;
+                font-weight: 700;
+                color: var(--contrast-color);
+                background: linear-gradient(to right, #ff8008, #ffc837);
+                border-radius: 50%;
+                transform-origin: center;
+                transform: rotate(120deg) translateX(150px) rotate(-120deg);
+                animation: circularMove 5s linear infinite;
+                animation-delay: 1.5s;
+            }
+
+            @keyframes circularMove {
+                0% {
+                    transform: rotate(0deg) translateX(170px) rotate(0deg);
+                }
+                25% {
+                    transform: rotate(90deg) translateX(170px) rotate(-90deg);
+                }
+                50% {
+                    transform: rotate(180deg) translateX(170px) rotate(-180deg);
+                }
+                75% {
+                    transform: rotate(270deg) translateX(170px) rotate(-270deg);
+                }
+                100% {
+                    transform: rotate(360deg) translateX(170px) rotate(-360deg);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .heros_row {
+                    flex-direction: column-reverse;
+                }
+
+                .heros_row .item-1 {
+                    margin-top: 40px;
+                    padding: 20px 12px;
+                }
+
+                .heros_row .item-1 {
+                    padding: 0;
+                }
+
+                .heros_row .item-1 .content_section {
+                    margin-left: 0;
+                }
+
+                .heros_row .item-2 .hero_img {
+                    height: 500px;
+                }
+            }
+
+            .about .section-title h2 {
+                background: var(--digiGlow-gradient);
+                color: var(--contrast-color);
+            }
+
+            .about .section-title p .description-title {
+                color: transparent;
+                background: var(--digiGlow-gradient);
+                background-clip: text;
+            }
+
+            .about .about-content h3 {
+                font-weight: 700;
+                font-size: 26px;
+            }
+
+            .about .about-content ul {
+                /* list-style: none; */
+                padding: 0;
+            }
+
+            .about .about_items_row {
+                margin: 15px 0;
+            }
+
+            .about .about_items_row .item_col {
+                margin: 10px 0;
+            }
+
+            .about .about_items_row .item_col .about_item {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                font-weight: 600;
+            }
+
+            .about .about_items_row .item_col .about_item i {
+                color: #fff;
+                font-size: 14px;
+                background-color: var(--digi-hover-color);
+                padding: 8px 10px;
+                border-radius: 50%;
+                margin-right: 8px;
+            }
+
+            .about .about-content ul li {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 35px;
+            }
+
+            .about .about-content ul li:first-child {
+                margin-top: 35px;
+            }
+
+            .about .about-content ul i {
+                background: var(--surface-color);
+                box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-shrink: 0;
+                width: 64px;
+                height: 64px;
+                font-size: 24px;
+                margin-right: 15px;
+                color: var(--accent-color);
+                border-radius: 50px;
+            }
+
+            .about .about-content ul i {
+                color: transparent;
+                background: var(--digiGlow-gradient);
+                background-clip: text;
+            }
+
+            .about .about-content ul h4 {
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            .about .about-content ul p {
+                font-size: 15px;
+            }
+
+            .about .about-content p:last-child {
+                margin-bottom: 0;
+            }
+
+            .contact .section-title h2 {
+                background: var(--digiGlow-gradient);
+                color: var(--contrast-color);
+            }
+
+            .contact .section-title p .description-title {
+                color: transparent;
+                background: var(--digiGlow-gradient);
+                background-clip: text;
+            }
+
+            .contact .info-wrap {
+                background-color: var(--surface-color);
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+                padding: 30px;
+            }
+
+            @media (max-width: 575px) {
+                .contact .info-wrap {
+                    padding: 20px;
+                }
+            }
+
+            .contact .info-item {
+                margin-bottom: 40px;
+            }
+
+            .contact .info-item i {
+                font-size: 20px;
+                color: var(--accent-color);
+                background: color-mix(in srgb, var(--accent-color), transparent 92%);
+                width: 44px;
+                height: 44px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50px;
+                transition: all 0.3s ease-in-out;
+                margin-right: 15px;
+            }
+
+            .contact .info-item h3 {
+                padding: 0;
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 5px;
+            }
+
+            /* .spinner-border {
+  width: 100%;
+  height: 1rem;
+  border-width: 2px;
+  vertical-align: middle;
+} */
+
+            .contact .info-item a {
+                text-decoration: none;
+                color: var(--default-color);
+            }
+
+            .contact .info-item p {
+                padding: 0;
+                margin-bottom: 0;
+                font-size: 14px;
+            }
+
+            .contact .info-item:hover i {
+                background: var(--accent-color);
+                color: var(--contrast-color);
+            }
+
+            .contact .php-email-form {
+                background-color: var(--surface-color);
+                height: 100%;
+                padding: 30px;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            }
+
+            @media (max-width: 575px) {
+                .contact .php-email-form {
+                    padding: 20px;
+                }
+            }
+
+            .contact .php-email-form input[type="text"],
+            .contact .php-email-form input[type="email"],
+            .contact .php-email-form textarea {
+                font-size: 14px;
+                padding: 10px 15px;
+                box-shadow: none;
+                border-radius: 0;
+                color: var(--default-color);
+                background-color: var(--surface-color);
+                border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+            }
+
+            .contact .php-email-form input[type="text"]:focus,
+            .contact .php-email-form input[type="email"]:focus,
+            .contact .php-email-form textarea:focus {
+                border-color: var(--accent-color);
+            }
+
+            .contact .php-email-form input[type="text"]::placeholder,
+            .contact .php-email-form input[type="email"]::placeholder,
+            .contact .php-email-form textarea::placeholder {
+                color: color-mix(in srgb, var(--default-color), transparent 70%);
+            }
+
+            .contact .php-email-form button[type="submit"] {
+                color: var(--contrast-color);
+                background: var(--digiGlow-gradient);
+                border: 0;
+                padding: 10px 30px;
+                transition: 0.4s ease-in-out;
+                border-radius: 50px;
+                width: 250px;
+            }
+
+            .contact .php-email-form button[type="submit"]:hover {
+                background: transparent;
+                color: var(--digi-hover-color);
+                border: 1px solid var(--digi-hover-color);
+            }
+
+            .newsletter_title {
+                color: transparent;
+                background: var(--digiGlow-gradient);
+                background-clip: text;
+            }
+
+            .footer {
+                color: var(--default-color);
+                background-color: var(--background-color);
+                font-size: 14px;
+                padding-bottom: 0px;
+                position: relative;
+            }
+
+            .footer .footer-newsletter {
+                background-color: color-mix(in srgb, var(--accent-color), transparent 96%);
+                padding: 50px 0;
+            }
+
+            .footer .footer-newsletter h4 {
+                font-size: 24px;
+            }
+
+            .footer .footer-newsletter .newsletter-form {
+                margin-top: 30px;
+                margin-bottom: 15px;
+                padding: 6px 8px;
+                position: relative;
+                background-color: var(--surface-color);
+                border: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+                box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+                display: flex;
+                transition: 0.3s;
+                border-radius: 4px;
+            }
+
+            .footer .footer-newsletter .newsletter-form:focus-within {
+                border-color: var(--accent-color);
+            }
+
+            .footer .footer-newsletter .newsletter-form input[type="email"] {
+                border: 0;
+                padding: 4px;
+                width: 100%;
+                background-color: var(--surface-color);
+                color: var(--default-color);
+            }
+
+            .footer .footer-newsletter .newsletter-form input[type="email"]:focus-visible {
+                outline: none;
+            }
+
+            .footer .footer-newsletter .newsletter-form input[type="submit"] {
+                border: 0;
+                font-size: 16px;
+                padding: 0 20px;
+                margin: -7px -8px -7px 0;
+                background: var(--digiGlow-gradient);
+                color: var(--contrast-color);
+                transition: 0.3s ease-in-out;
+                border-radius: 0 4px 4px 0;
+            }
+
+            .footer .footer-newsletter .newsletter-form input[type="submit"]:hover {
+                background: var(--digi-hover-color);
+            }
+
+            .footer .footer-top {
+                padding-top: 50px;
+                margin-top: 50px;
+                border-top: 1px solid rgb(228, 227, 227);
+            }
+
+            .footer-top .footer-about .sitename {
+                color: transparent;
+                background: var(--digiGlow-gradient);
+                background-clip: text;
+            }
+
+            .footer .social-links a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                border-radius: 4px;
+                border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+                font-size: 16px;
+                color: color-mix(in srgb, var(--default-color), transparent 20%);
+                margin-right: 10px;
+                transition: 0.3s;
+            }
+
+            .footer .social-links a:hover {
+                color: transparent;
+                background: var(--digiGlow-gradient);
+                background-clip: text;
+                border-color: var(--digi-hover-color);
+            }
+
+            .footer h4 {
+                font-size: 16px;
+                font-weight: bold;
+                position: relative;
+                padding-bottom: 12px;
+            }
+
+            .footer .footer-links {
+                margin-bottom: 30px;
+            }
+
+            .footer .footer-links ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .footer .footer-links ul i {
+                margin-right: 3px;
+                font-size: 12px;
+                line-height: 0;
+                color: var(--accent-color);
+            }
+
+            .footer .footer-links ul li {
+                padding: 10px 0;
+                display: flex;
+                align-items: center;
+            }
+
+            .footer .footer-links ul li:first-child {
+                padding-top: 0;
+            }
+
+            .footer .footer-links ul a {
+                display: inline-block;
+                color: color-mix(in srgb, var(--default-color), transparent 20%);
+                line-height: 1;
+            }
+
+            .footer .footer-links ul a:hover {
+                color: var(--accent-color);
+            }
+
+            .footer .footer-about a {
+                color: var(--heading-color);
+                font-size: 24px;
+                font-weight: 600;
+                font-family: var(--heading-font);
+            }
+
+            .footer .footer-contact p {
+                margin-bottom: 5px;
+                text-align: start;
+            }
+
+            .footer .footer-contact p a {
+                text-decoration: none;
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            .footer .copyright {
+                padding-top: 25px;
+                padding-bottom: 25px;
+                border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+            }
+
+            .footer .copyright p {
+                margin-bottom: 0;
+            }
+
+            .footer .credits {
+                margin-top: 6px;
+                font-size: 13px;
+            }
+
+            #preloader {
+                position: fixed;
+                inset: 0;
+                z-index: 9999;
+                background-color: var(--background-color, #fff);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .spinner {
+                width: 50px;
+                height: 50px;
+                border-top: 5px solid rgb(53, 52, 52);
+                border-top-color: var(--digi-hover-color);
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .whatsapp-btn {
+                position: fixed;
+                visibility: visible;
+                left: 15px;
+                bottom: 15px;
+                z-index: 99999;
+                /* background: var(--digiGlow-gradient); */
+                width: 50px;
+                height: 50px;
+                border-radius: 4px;
+                transition: all 0.4s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .whatsapp-btn i {
+                font-size: 28px;
+                color: #25d366;
+                line-height: 0;
+            }
+
+            .whatsapp-btn:hover {
+                transform: scale(1.3);
+            }
+
+            .whatsapp-btn i span {
+                position: absolute;
+                top: 10px;
+                right: 0px;
+                font-size: 7px;
+                font-weight: 600;
+                background: var(--digiGlow-gradient);
+                padding: 10px 4px;
+                color: var(--contrast-color);
+                border-radius: 50%;
+            }
+
+            .whatsapp-btn-2 {
+                position: fixed;
+                visibility: visible;
+                left: 15px;
+                bottom: 60px;
+                z-index: 99999;
+                /* background: var(--digiGlow-gradient); */
+                width: 50px;
+                height: 50px;
+                border-radius: 4px;
+                transition: all 0.4s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .whatsapp-btn-2 i {
+                font-size: 28px;
+                color: #25d366;
+                line-height: 0;
+            }
+
+            .whatsapp-btn-2:hover {
+                transform: scale(1.3);
+            }
+
+            .whatsapp-btn-2 i span {
+                position: absolute;
+                top: 10px;
+                right: 0px;
+                font-size: 7px;
+                font-weight: 600;
+                background: var(--digiGlow-gradient);
+                padding: 10px 4px;
+                color: var(--contrast-color);
+                border-radius: 50%;
+            }
         </style>
     </head>
 
@@ -44,7 +746,7 @@
                 <div class="container position-relative d-flex align-items-center justify-content-between">
                     <a href="#hero" class="logo d-flex align-items-center">
                         <!-- Uncomment the line below if you also wish to use an image logo -->
-                        <img id="Logo_img" src="{% static 'img/MINDZEN-logo.png' %}" alt="Logo" />
+                        <img id="Logo_img" src="{% static 'img/MINDZEN-logo.png' %}" style="height: 70px" alt="Logo" />
 
                         <h1 class="sitename">MindZen</h1>
                     </a>
@@ -82,12 +784,16 @@
                             </div>
                         </div>
                         <div class="col-xl-6 col-lg-6 col-md-6 col-12 p-0 item-2">
-                            <div class="image_section" style="background-image: url('{% static "img/shape-3.jpg" %}'); background-position: center;">
-                                <div class="hero_img">
-                                    <img src="{% static '/img/bg-3.png' %}" class="d-block w-100" alt="..." />
-                                    {% comment %} <div class="third-circle">AI</div> {% endcomment %}
-                                </div>
+                            <!-- Move hero_img div outside and above image_section -->
+                            <div class="hero_img">
+                                <img src="{% static '/img/bg-3.png' %}" class="d-block w-100" alt="..." />
                             </div>
+
+                            <!-- Background image section with animations -->
+                            <div
+                                class="image_section"
+                                style="background-image: url('{% static 'img/shape-3.jpg' %}'); background-position: center"
+                            ></div>
                         </div>
                     </div>
                 </div>
@@ -836,8 +1542,9 @@
                                             <strong> India</strong>
                                         </p>
                                         <p class="mt-3">
-                                            Mindzen Technologies, 01, Building C 106, Shabiya 09, MBZ,
-                                            Behind Safeer Mall, <strong>UAE</strong><br> Land Line - 02 4430074
+                                            Mindzen Technologies, 01, Building C 106, Shabiya 09, MBZ, Behind Safeer Mall,
+                                            <strong>UAE</strong><br />
+                                            Land Line - 02 4430074
                                         </p>
                                     </div>
                                 </div>
@@ -848,7 +1555,7 @@
                                     <div>
                                         <h3>Call Us</h3>
                                         <a href="tel:+917829527882">+91 7829527882 (<strong>India</strong>)</a>
-                                        <br>
+                                        <br />
                                         <a href="tel:+971509798265">+971 50 979 8265 (<strong>UAE</strong>)</a>
                                     </div>
                                 </div>
@@ -858,9 +1565,17 @@
                                     <i class="bi bi-envelope flex-shrink-0"></i>
                                     <div>
                                         <h3>Email Us</h3>
-                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@mindzentechno.com" target="_blank">info@mindzentechno.com</a>
-                                        <br>
-                                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sales@mindzentechno.com" target="_blank">sales@mindzentechno.com</a>
+                                        <a
+                                            href="https://mail.google.com/mail/?view=cm&fs=1&to=info@mindzentechno.com"
+                                            target="_blank"
+                                            >info@mindzentechno.com</a
+                                        >
+                                        <br />
+                                        <a
+                                            href="https://mail.google.com/mail/?view=cm&fs=1&to=sales@mindzentechno.com"
+                                            target="_blank"
+                                            >sales@mindzentechno.com</a
+                                        >
                                     </div>
                                 </div>
                                 <!-- End Info Item -->
@@ -879,7 +1594,9 @@
                         <div class="col-lg-7">
                             {% csrf_token %}
                             <form
-                                action="/contact/" method="post" class="php-email-form"
+                                action="/contact/"
+                                method="post"
+                                class="php-email-form"
                                 data-aos="fade-up"
                                 data-aos-delay="200"
                             >
@@ -923,9 +1640,14 @@
                                     </div>
 
                                     <div class="col-md-12 text-center">
-                                        {% comment %} <div class="loading">Loading</div> {% endcomment %}
-                                        {% comment %} <div class="error-message"></div> {% endcomment %}
-                                        <div class="sent-message" style="display: none; color: white;">Your message has been sent. Thank you!</div>
+                                        {% comment %}
+                                        <div class="loading">Loading</div>
+                                        {% endcomment %} {% comment %}
+                                        <div class="error-message"></div>
+                                        {% endcomment %}
+                                        <div class="sent-message" style="display: none; color: white">
+                                            Your message has been sent. Thank you!
+                                        </div>
 
                                         <button type="submit" id="submit-btn">
                                             <span class="btn-text">Send Message</span>
@@ -943,7 +1665,8 @@
         </main>
 
         <footer id="footer" class="footer">
-            {% comment %} <div class="footer-newsletter">
+            {% comment %}
+            <div class="footer-newsletter">
                 <div class="container">
                     <div class="row justify-content-center text-center">
                         <div class="col-lg-6">
@@ -960,7 +1683,8 @@
                         </div>
                     </div>
                 </div>
-            </div> {% endcomment %}
+            </div>
+            {% endcomment %}
 
             <div class="container footer-top">
                 <div class="row gy-4">
@@ -971,11 +1695,26 @@
                         <div class="footer-contact pt-3">
                             <p>Mindzen Technologies Private Limited, Akshaya Nagar,Bangalore, <strong>India</strong></p>
                             <p>Mindzen Technologies, MBZ, Behind Safeer Mall, <strong>UAE</strong></p>
-                            <p class="mt-3"><strong>Email:</strong> <a href="https://mail.google.com/mail/?view=cm&fs=1&to=info@mindzentechno.com" target="_blank">info@mindzentechno.com</a>
-                            <br><a href="https://mail.google.com/mail/?view=cm&fs=1&to=sales@mindzentechno.com" target="_blank" style="margin-left: 43px;">sales@mindzentechno.com</a></p>
+                            <p class="mt-3">
+                                <strong>Email:</strong>
+                                <a
+                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=info@mindzentechno.com"
+                                    target="_blank"
+                                    >info@mindzentechno.com</a
+                                >
+                                <br /><a
+                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=sales@mindzentechno.com"
+                                    target="_blank"
+                                    style="margin-left: 43px"
+                                    >sales@mindzentechno.com</a
+                                >
+                            </p>
                             <p>
-                                <strong>Phone:</strong> <a href="tel:+917829527882">+91 7829527882 (India)</a><br /><a href="tel:+971509798265" class="ms-5"
-                                    >+971 50 979 8265 (UAE)</a>
+                                <strong>Phone:</strong> <a href="tel:+917829527882">+91 7829527882 (India)</a><br /><a
+                                    href="tel:+971509798265"
+                                    class="ms-5"
+                                    >+971 50 979 8265 (UAE)</a
+                                >
                             </p>
                         </div>
                     </div>
@@ -1012,10 +1751,18 @@
                             news.
                         </p>
                         <div class="social-links d-flex">
-                            {% comment %} <a href="https://wa.me/917829527882" target="_blank"><i class="bi bi-whatsapp"></i></a> {% endcomment %}
-                            <a href="https://www.facebook.com/people/Mindzen-Technologies/61573593892371/?sk=about" target="_blank"><i class="bi bi-facebook"></i></a>
+                            {% comment %}
+                            <a href="https://wa.me/917829527882" target="_blank"><i class="bi bi-whatsapp"></i></a> {%
+                            endcomment %}
+                            <a
+                                href="https://www.facebook.com/people/Mindzen-Technologies/61573593892371/?sk=about"
+                                target="_blank"
+                                ><i class="bi bi-facebook"></i
+                            ></a>
                             {% comment %} <a href=""><i class="bi bi-instagram"></i></a> {% endcomment %}
-                            <a href="https://www.linkedin.com/company/mindzentechno/?viewAsMember=true" target="_blank"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/company/mindzentechno/?viewAsMember=true" target="_blank"
+                                ><i class="bi bi-linkedin"></i
+                            ></a>
                         </div>
                     </div>
                 </div>
@@ -1034,14 +1781,23 @@
             ><i class="bi bi-arrow-up-short"></i
         ></a>
 
-        <a href="https://wa.me/917829527882" target="_blank" id="whatsapp-btn" class="whatsapp-btn d-flex align-items-center justify-content-center">
+        <a
+            href="https://wa.me/917829527882"
+            target="_blank"
+            id="whatsapp-btn"
+            class="whatsapp-btn d-flex align-items-center justify-content-center"
+        >
             <i class="bi bi-whatsapp"><span>IND</span></i>
-        </a>       
-        
-        
-        <a href="https://wa.me/971509798265" target="_blank" id="whatsapp-btn-2" class="whatsapp-btn-2 d-flex align-items-center justify-content-center">
+        </a>
+
+        <a
+            href="https://wa.me/971509798265"
+            target="_blank"
+            id="whatsapp-btn-2"
+            class="whatsapp-btn-2 d-flex align-items-center justify-content-center"
+        >
             <i class="bi bi-whatsapp"><span>UAE</span></i>
-        </a>          
+        </a>
 
         <!-- Preloader -->
         {% comment %}
@@ -1084,71 +1840,70 @@
             document.addEventListener("DOMContentLoaded", function () {
                 document.querySelector(".php-email-form").addEventListener("submit", function (e) {
                     e.preventDefault();
-                    
+
                     let submitBtn = document.getElementById("submit-btn");
                     let btnText = document.querySelector(".btn-text");
                     let btnSpinner = document.getElementById("btn-spinner");
                     let successMessage = document.querySelector(".sent-message");
                     let errorMessage = document.querySelector(".error-message");
-            
+
                     // Hide previous messages
                     successMessage.style.display = "none";
                     errorMessage.style.display = "none";
-            
+
                     // Show spinner, hide text
                     btnText.style.display = "none";
                     btnSpinner.classList.remove("d-none");
-            
+
                     let formData = new FormData(this);
-            
+
                     fetch("/contact/", {
                         method: "POST",
                         body: formData,
                         headers: {
                             "X-Requested-With": "XMLHttpRequest",
-                            "X-CSRFToken": getCookie("csrftoken")
+                            "X-CSRFToken": getCookie("csrftoken"),
                         },
-                        credentials: "same-origin"
+                        credentials: "same-origin",
                     })
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.message) {
-                            successMessage.innerText = "Your message has been sent successfully!";
-                            successMessage.style.display = "block"; // Show success message
-                            this.reset();
-                        } else {
-                            errorMessage.innerText = data.error;
+                        .then((response) => response.json())
+                        .then((data) => {
+                            if (data.message) {
+                                successMessage.innerText = "Your message has been sent successfully!";
+                                successMessage.style.display = "block"; // Show success message
+                                this.reset();
+                            } else {
+                                errorMessage.innerText = data.error;
+                                errorMessage.style.display = "block";
+                            }
+                        })
+                        .catch((error) => {
+                            errorMessage.innerText = `Error: ${error}`;
                             errorMessage.style.display = "block";
-                        }
-                    })
-                    .catch(error => {
-                        errorMessage.innerText = `Error: ${error}`;
-                        errorMessage.style.display = "block";
-                    })
-                    .finally(() => {
-                        // Restore button text and hide spinner
-                        btnText.style.display = "inline";
-                        btnSpinner.classList.add("d-none");
-                    });
+                        })
+                        .finally(() => {
+                            // Restore button text and hide spinner
+                            btnText.style.display = "inline";
+                            btnSpinner.classList.add("d-none");
+                        });
                 });
             });
-            
+
             // Function to get CSRF token
             function getCookie(name) {
                 let cookieValue = null;
-                if (document.cookie && document.cookie !== '') {
-                    const cookies = document.cookie.split(';');
+                if (document.cookie && document.cookie !== "") {
+                    const cookies = document.cookie.split(";");
                     for (let i = 0; i < cookies.length; i++) {
                         const cookie = cookies[i].trim();
-                        if (cookie.startsWith(name + '=')) {
+                        if (cookie.startsWith(name + "=")) {
                             cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
                             break;
                         }
                     }
                 }
                 return cookieValue;
-            }           
-            </script>
-            
+            }
+        </script>
     </body>
 </html>
