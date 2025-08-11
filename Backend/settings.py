@@ -149,3 +149,8 @@ EMAIL_PORT=587
 EMAIL_USE_TLS=True
 EMAIL_HOST_USER="mindzensmtp@gmail.com"
 EMAIL_HOST_PASSWORD="sfjuscgwsnqnzyrk"
+
+
+ROOT_URLCONF = 'Backend.urls'  
+
+WSGI_APPLICATION = 'Backend.wsgi.application'
