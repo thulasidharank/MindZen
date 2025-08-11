@@ -26,7 +26,15 @@ SECRET_KEY = 'django-insecure-1f6ouvwdt7)mbk(e9j4&s6avx4psrd26887y)(c&l_fse(5_@t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
+
+ALLOWED_HOSTS = []
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+
+if DEBUG:
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -150,7 +158,3 @@ EMAIL_USE_TLS=True
 EMAIL_HOST_USER="mindzensmtp@gmail.com"
 EMAIL_HOST_PASSWORD="sfjuscgwsnqnzyrk"
 
-
-ROOT_URLCONF = 'Backend.urls'  
-
-WSGI_APPLICATION = 'Backend.wsgi.application'
