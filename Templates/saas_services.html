@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AI-Powered SaaS Development - MindZen</title>
+
+        <!-- Favicons -->
+        <link href="{% static 'img/MINDZEN-logo.png' %}" rel="icon" />
+        <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" />
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+
+        <!-- Vendor CSS Files -->
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet" />
+
+        <link rel="stylesheet" href="{% static 'css/design_services.css' %}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <style>
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header" class="header sticky-top d-flex align-items-center justify-content-between">
+            <div class="branding d-flex align-items-center">
+                <div class="position-relative d-flex align-items-center justify-content-between">
+                    <a href="#hero" class="logo d-flex align-items-center">
+                        <img id="Logo_img" src="{% static 'img/MINDZEN-logo.png' %}" alt="Logo" />
+                        <h1 class="sitename">MindZen</h1>
+                    </a>
+                </div>
+            </div>
+            <button class="custom-button">
+                <a href="/">
+                    <i class="fa-solid fa-house home-icon"></i>
+                </a>
+            </button>
+        </header>
+
+        <!-- Banner Section -->
+        <section class="banner">
+            <div class="container-fluid p-0">
+                <div class="row banner_row">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade p-0" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="5000" style="background-image: url('{% static "img/saas/saas1.jpg" %}'); background-position: center;"></div>
+                            <div class="carousel-item" data-bs-interval="5000" style="background-image: url('{% static "img/saas/saas2.jpg" %}'); background-position: center;"></div>
+                        </div>
+                    </div>
+                    <div class="banner-text">
+                        <h1>AI-Powered SaaS Development</h1>
+                        <p>Where Intelligent Software Meets Scalable Business</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="content">
+            <div class="container">
+                <h2>AI-Powered SaaS Development Solutions</h2>
+                <p>
+                    At MindZen, we fuse the agility of SaaS with the intelligence of AI to build next-gen platforms that think, learn, and evolve. Our AI-powered SaaS solutions are designed to be scalable, adaptive, and smart by default.
+                </p>
+
+                <h3>Our SaaS Development Services</h3>
+                <ul>
+                    <li>AI-Driven SaaS Product Strategy</li>
+                    <li>Rapid MVP Development & Validation</li>
+                    <li>Embedded AI Services & Automation</li>
+                    <li>Custom AI Integrations & Fine-tuning</li>
+                    <li>Scalable Cloud Infrastructure</li>
+                    <li>Multi-tenant Architecture Design</li>
+                </ul>
+
+                <div class="service-cards">
+                    <div class="service-card">
+                        <h4>AI-First Product Strategy</h4>
+                        <p>
+                            Modular, multi-tenant architecture with AI-first planning and use case alignment for real-world impact and monetization.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Rapid MVP Development</h4>
+                        <p>Fast-track your idea into working prototypes with embedded AI features, launching and validating in weeks.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Embedded AI Services</h4>
+                        <p>NLP features, chatbots, predictive analytics, smart search, and intelligent agents for task automation.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Custom AI Integrations</h4>
+                        <p>Fine-tuning LLMs, RAG systems, vector databases, and secure model hosting for compliance-heavy industries.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Scalable Deployment</h4>
+                        <p>
+                            CI/CD pipelines, cloud-native infrastructure, automated testing, and ongoing AI lifecycle management.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Industry Solutions</h4>
+                        <p>
+                            Specialized AI-powered SaaS for EdTech, HR, CRM, Analytics, and eCommerce with proven use cases.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="highlight-section">
+                    <h3>Ready to Build Your AI-Powered SaaS?</h3>
+                    <p>From ideation to scale, we're your complete tech and AI partner for SaaS success.</p>
+                    <a href="/#contact" class="cta-button">Get in Touch</a>
+                </div>
+
+                <h3>Why AI + SaaS Is the Future</h3>
+                <p>
+                    In today's landscape, SaaS without AI is just software. AI transforms your product into a dynamic, evolving service that delivers personalization at scale, smarter automation, and faster decision-making.
+                </p>
+            </div>
+        </section>
+
+        <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let carousel = new bootstrap.Carousel(document.querySelector("#carouselExampleFade"), {
+                    interval: 5000,
+                    pause: false,
+                });
+            });
+        </script>
+    </body>
+</html>
