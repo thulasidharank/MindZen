@@ -9,9 +9,26 @@ from django.utils.decorators import method_decorator
 def home(request):
     return render(request, 'index.html')
 
+def genai_services(request):
+    return render(request, 'genai_services.html')
+
+def saas_services(request):
+    return render(request, 'saas_services.html')
+
+def application_development_services(request):
+    return render(request, 'application_development_services.html')
+
+def legacy_modernization_services(request):
+    return render(request, 'legacy_modernization_services.html')
+
+def erp_services(request):
+    return render(request, 'erp_services.html')
+
+def business_growth_services(request):
+    return render(request, 'business_growth_services.html')
+
 def staff_augmentation(request):
     return render(request, 'staff_augmentation.html')
-
 
 def development_services(request):
     return render(request, 'development_services.html')
