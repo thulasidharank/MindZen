@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Business Growth Advisory Services - MindZen</title>
+
+        <!-- Favicons -->
+        <link href="{% static 'img/MINDZEN-logo.png' %}" rel="icon" />
+        <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" />
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+
+        <!-- Vendor CSS Files -->
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet" />
+
+        <link rel="stylesheet" href="{% static 'css/design_services.css' %}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <style>
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header" class="header sticky-top d-flex align-items-center justify-content-between">
+            <div class="branding d-flex align-items-center">
+                <div class="position-relative d-flex align-items-center justify-content-between">
+                    <a href="#hero" class="logo d-flex align-items-center">
+                        <img id="Logo_img" src="{% static 'img/MINDZEN-logo.png' %}" alt="Logo" />
+                        <h1 class="sitename">MindZen</h1>
+                    </a>
+                </div>
+            </div>
+            <button class="custom-button">
+                <a href="/">
+                    <i class="fa-solid fa-house home-icon"></i>
+                </a>
+            </button>
+        </header>
+
+        <!-- Banner Section -->
+        <section class="banner">
+            <div class="container-fluid p-0">
+                <div class="row banner_row">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade p-0" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="5000" style="background-image: url('{% static "img/growth/growth1.jpg" %}'); background-position: center;">
+                                
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000" style="background-image: url('{% static "img/growth/growth2.jpg" %}'); background-position: center;">
+                                
+                            </div>
+                           
+                        </div>
+                    </div>
+                    <div class="banner-text">
+                        <h1>Business Growth Advisory Services</h1>
+                        <p>Unlock Your Full Potential with Strategy, Marketing & Technology That Drive Results</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="content">
+            <div class="container">
+                <h2>Comprehensive Growth Solutions</h2>
+                <p>
+                    We specialize in delivering end-to-end growth enablement through marketing acceleration, strategic advisory, and technology innovation for startups, SMEs, and enterprises.
+                </p>
+
+                <div class="service-cards">
+                    <div class="service-card">
+                        <h4>Marketing & Sales Acceleration</h4>
+                        <p>
+                            Digital strategy, brand development, media buying, content marketing, CRM optimization, and performance marketing.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Business Strategy & Planning</h4>
+                        <p>Model validation, go-to-market strategy, market research, revenue optimization, and business process reengineering.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Technology Advisory</h4>
+                        <p>Digital roadmaps, AI/automation consulting, SaaS & app advisory, cloud strategy, and MarTech implementation.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Revenue Optimization</h4>
+                        <p>Sales funnel optimization, pricing strategy, customer acquisition cost reduction, and lifetime value enhancement.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Digital Transformation</h4>
+                        <p>
+                            Process automation, digital workflow optimization, and technology integration for operational excellence.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Market Expansion</h4>
+                        <p>
+                            New market entry strategies, competitive analysis, partnership development, and scaling frameworks.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="highlight-section">
+                    <h3>Ready to Accelerate Your Growth?</h3>
+                    <p>Partner with MindZen to unlock your business's full potential through strategic advisory and execution excellence.</p>
+                    <a href="/#contact" class="cta-button">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let carousel = new bootstrap.Carousel(document.querySelector("#carouselExampleFade"), {
+                    interval: 5000,
+                    pause: false,
+                });
+            });
+        </script>
+    </body>
+</html>

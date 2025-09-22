@@ -1,0 +1,151 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Generative AI Consulting & Development - MindZen</title>
+
+        <!-- Favicons -->
+        <link href="{% static 'img/MINDZEN-logo.png' %}" rel="icon" />
+        <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" />
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+
+        <!-- Vendor CSS Files -->
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet" />
+
+        <link rel="stylesheet" href="{% static 'css/design_services.css' %}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <style>
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header" class="header sticky-top d-flex align-items-center justify-content-between">
+            <div class="branding d-flex align-items-center">
+                <div class="position-relative d-flex align-items-center justify-content-between">
+                    <a href="#hero" class="logo d-flex align-items-center">
+                        <img id="Logo_img" src="{% static 'img/MINDZEN-logo.png' %}" alt="Logo" />
+                        <h1 class="sitename">MindZen</h1>
+                    </a>
+                </div>
+            </div>
+            <button class="custom-button">
+                <a href="/">
+                    <i class="fa-solid fa-house home-icon"></i>
+                </a>
+            </button>
+        </header>
+
+        <!-- Banner Section -->
+        <section class="banner">
+            <div class="container-fluid p-0">
+                <div class="row banner_row">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade p-0" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="5000" style="background-image: url('{% static "img/AI/ai1.jpg" %}'); background-position: center;">
+                                
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000" style="background-image: url('{% static "img/AI/ai2.jpg" %}'); background-position: center;">
+                                
+                            </div>
+                            <div class="carousel-item" data-bs-interval="5000" style="background-image: url('{% static "img/AI/ai3.jpg" %}'); background-position: center;">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-text">
+                        <h1>Generative AI Consulting & Development</h1>
+                        <p>Empowering Intelligent Evolution with Generative & Agentic AI</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="content">
+            <div class="container">
+                <h2>Comprehensive AI Solutions</h2>
+                <p>
+                    At MindZen, we build intelligent systems that think, learn, and act—tailored to your business goals. Whether you're exploring AI for the first time or scaling enterprise-grade solutions, our team helps you innovate faster, smarter, and more ethically.
+                </p>
+
+                <h3>Our AI Specializations</h3>
+                <ul>
+                    <li>AI Strategy & Readiness Assessment</li>
+                    <li>Custom Generative AI Development</li>
+                    <li>Agentic AI Systems & Automation</li>
+                    <li>AI Product Engineering & MVPs</li>
+                    <li>Responsible AI & Governance</li>
+                    <li>Enterprise AI Integration</li>
+                </ul>
+
+                <div class="service-cards">
+                    <div class="service-card">
+                        <h4>AI Strategy & Consulting</h4>
+                        <p>
+                            AI readiness assessments, business case development, and strategic roadmaps for pilot to production deployment.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Custom AI Development</h4>
+                        <p>Fine-tuning LLMs, RAG systems, conversational assistants, and multimodal AI solutions tailored to your needs.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Agentic AI Systems</h4>
+                        <p>Autonomous agents that plan, act, and learn—completing complex tasks and optimizing through feedback.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>AI Product Engineering</h4>
+                        <p>End-to-end development from MVPs to enterprise-scale AI applications with scalable architecture.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Responsible AI & Compliance</h4>
+                        <p>
+                            GDPR/HIPAA-compliant architecture, model transparency, bias mitigation, and continuous monitoring.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Enterprise AI Integration</h4>
+                        <p>
+                            Seamless integration of AI capabilities into existing systems with security, scalability, and audit-ready architecture.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="highlight-section">
+                    <h3>Ready to Transform with AI?</h3>
+                    <p>From strategy to deployment, we support your entire AI journey with proven expertise and ethical practices.</p>
+                    <a href="/#contact" class="cta-button">Get in Touch</a>
+                </div>
+
+                <h3>Why Choose MindZen for AI?</h3>
+                <p>
+                    We combine deep technical expertise with business acumen to deliver AI solutions that drive real results. Our model-agnostic approach ensures you get the best tools for your specific needs, while our focus on ethics and compliance keeps you future-ready.
+                </p>
+            </div>
+        </section>
+
+        <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let carousel = new bootstrap.Carousel(document.querySelector("#carouselExampleFade"), {
+                    interval: 5000,
+                    pause: false,
+                });
+            });
+        </script>
+    </body>
+</html>

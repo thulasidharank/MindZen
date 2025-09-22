@@ -1,0 +1,144 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Application Development Services - MindZen</title>
+
+        <!-- Favicons -->
+        <link href="{% static 'img/MINDZEN-logo.png' %}" rel="icon" />
+        <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon" />
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com" rel="preconnect" />
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+
+        <!-- Vendor CSS Files -->
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/aos/aos.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet" />
+        <link href="{% static 'vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet" />
+
+        <link rel="stylesheet" href="{% static 'css/design_services.css' %}" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <style>
+            a {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header" class="header sticky-top d-flex align-items-center justify-content-between">
+            <div class="branding d-flex align-items-center">
+                <div class="position-relative d-flex align-items-center justify-content-between">
+                    <a href="#hero" class="logo d-flex align-items-center">
+                        <img id="Logo_img" src="{% static 'img/MINDZEN-logo.png' %}" alt="Logo" />
+                        <h1 class="sitename">MindZen</h1>
+                    </a>
+                </div>
+            </div>
+            <button class="custom-button">
+                <a href="/">
+                    <i class="fa-solid fa-house home-icon"></i>
+                </a>
+            </button>
+        </header>
+
+        <!-- Banner Section -->
+        <section class="banner">
+            <div class="container-fluid p-0">
+                <div class="row banner_row">
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade p-0" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="5000" style="background-image: url('{% static "img/applicationDevelopment/application1.jpg" %}'); background-position: center;"></div>
+                            <div class="carousel-item" data-bs-interval="5000" style="background-image: url('{% static "img/applicationDevelopment/application2.jpg" %}'); background-position: center;"></div>
+                        </div>
+                    </div>
+                    <div class="banner-text">
+                        <h1>Application Development Services</h1>
+                        <p>Smart, Scalable & AI-Ready Solutions for a Digital-First World</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="content">
+            <div class="container">
+                <h2>Smart Application Development Solutions</h2>
+                <p>
+                    At MindZen, we design and develop high-performance mobile and web applications that combine elegant user experiences with powerful backend logic and intelligent AI features. Whether you're a startup launching your MVP or an enterprise modernizing your platform, we build future-ready applications.
+                </p>
+
+                <h3>Our Development Services</h3>
+                <ul>
+                    <li>Web Application Development</li>
+                    <li>Mobile Application Development</li>
+                    <li>Progressive Web Apps (PWA)</li>
+                    <li>AI-Powered App Features</li>
+                    <li>MVP Development & Scaling</li>
+                    <li>Enterprise Application Modernization</li>
+                </ul>
+
+                <div class="service-cards">
+                    <div class="service-card">
+                        <h4>Web Application Development</h4>
+                        <p>
+                            Full-stack development with adaptive UI/UX design, microservices architecture, and SEO optimization for all devices.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Mobile App Development</h4>
+                        <p>Native and cross-platform apps for iOS and Android with offline-first architecture and app store deployment.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>AI-Powered Features</h4>
+                        <p>Intelligent chatbots, voice recognition, personalized content, image analysis, and predictive search capabilities.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>MVP Development</h4>
+                        <p>Rapid prototyping with lean feature sets, user validation, and fast launch cycles for early market entry.</p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Enterprise Scaling</h4>
+                        <p>
+                            Infrastructure optimization, CI/CD pipelines, multi-region architecture, and advanced analytics integration.
+                        </p>
+                    </div>
+                    <div class="service-card">
+                        <h4>Secure & Compliant</h4>
+                        <p>
+                            GDPR/HIPAA-compliant architecture with end-to-end encryption and scalable cloud infrastructure.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="highlight-section">
+                    <h3>Ready to Build Your Next Application?</h3>
+                    <p>From design to deployment, we bring the strategy, technology, and talent to make your vision reality.</p>
+                    <a href="/#contact" class="cta-button">Contact us today</a>
+                </div>
+
+                <h3>Technologies & Industries We Serve</h3>
+                <p>
+                    We use cutting-edge technologies including React, Flutter, Node.js, Django, and AI frameworks to serve Healthcare, Fintech, eCommerce, Education, Logistics, and Enterprise clients with tailored solutions.
+                </p>
+            </div>
+        </section>
+
+        <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                let carousel = new bootstrap.Carousel(document.querySelector("#carouselExampleFade"), {
+                    interval: 5000,
+                    pause: false,
+                });
+            });
+        </script>
+    </body>
+</html>
